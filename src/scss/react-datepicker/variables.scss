@@ -1,0 +1,26 @@
+$dark-highlight: #272727;
+
+$datepicker__background-color: transparent;
+$datepicker__border-color: transparent;
+$datepicker__highlighted-color: #3dcc4a;
+$datepicker__muted-color: #9d9d9d;//#ccc !default;
+$datepicker__selected-color:#fff;//#216ba5 !default;
+$datepicker__selected-color-in-range: #fff;
+$datepicker__selected-bg-in-range: $dark-highlight;
+$datepicker__text-color: #ffffff;
+$datepicker__header-color: #ffffff;
+$datepicker__navigation-disabled-color: lighten(
+  $datepicker__muted-color,
+  10%
+) !default;
+
+$datepicker__day-height: 3rem;
+$datepicker__border-radius: 0;//50rem;//0.3rem !default;
+$datepicker__day-margin: 0;// 0.166rem !default;
+$datepicker__day-padding: 0.5rem 0.125rem;
+$datepicker__font-size: 0.8rem !default;
+$datepicker__font-family: "Helvetica Neue", helvetica, arial, sans-serif !default;
+$datepicker__item-size: 14.2857142857%;//1.7rem !default;
+$datepicker__margin: 0;//0.4rem !default;
+$datepicker__navigation-button-size: 32px !default;
+$datepicker__triangle-size: 8px !default;

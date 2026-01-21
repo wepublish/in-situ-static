@@ -1,0 +1,17 @@
+.input-group-outer {
+  @extend .rounded-pill;
+  border:1px solid $input-group-addon-border-color;
+  > *{
+    margin-top: -$input-border-width;
+    margin-bottom: -$input-border-width;
+    &:first-child {
+      margin-left: -$input-border-width;
+    }
+    &:last-child {
+      margin-right: -$input-border-width;
+    }
+  }
+  .input-group-text {
+    border: $input-border-width solid transparent;
+  }
+}

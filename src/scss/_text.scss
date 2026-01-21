@@ -1,0 +1,23 @@
+.ff-serif {
+  font-family: $font-family-serif !important;
+  font-style: italic !important;
+}
+
+.ff-sans-serif {
+  font-family: 'SuisseIntl' !important;
+  font-style: normal !important;
+}
+
+::-moz-selection {
+  color: #ffffff;
+  background: #111111;
+}
+
+::selection {
+  color: #ffffff;
+  background: #111111;
+}
+
+.text-greyed {
+  color: #757575;
+}

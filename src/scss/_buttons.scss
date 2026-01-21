@@ -1,0 +1,141 @@
+.btn {
+  //@extend .rounded-pill;
+  border-radius:$border-radius-pill;
+
+  .btn-check:focus + &,
+  &:focus {
+    border-color: var(--#{$prefix}btn-focus-border-color);
+    @include gradient-bg(var(--#{$prefix}btn-focus-bg));
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:active,
+  &.active,
+  &.show {
+    border-color: var(--#{$prefix}btn-active-border-color);
+    background-color: var(--#{$prefix}btn-active-bg);
+  }
+
+}
+
+
+[class*="btn-outline-"] {
+  // box-shadow:none;
+  // box-shadow: 0px 0px 0px 1px #000000;
+
+  box-shadow: var(--#{$prefix}btn-box-shadow), inset 0px 0px 0px 1px rgba(0, 0, 0, 0);
+
+  &:active,
+  &.active,
+  &.show {
+      &, &:focus {
+
+        box-shadow:var(--#{$prefix}btn-active-shadow), inset 0px 0px 0px 1px var(--#{$prefix}btn-active-border-color);
+
+        border-style:solid!important;
+      }
+  }
+
+  &:focus {
+    color: var(--#{$prefix}btn-focus-color);
+    box-shadow: var(--#{$prefix}btn-box-shadow),  inset 0px 0px 0px 1px var(--#{$prefix}btn-active-border-color);
+    border-style:solid!important;
+  }
+
+  &.btn-minimal {
+    border-width:2px !important;
+    box-shadow:none!important;
+  }
+}
+
+// scss-docs-start btn-variant-loops
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @if $color == "light" {
+      @include button-variant(
+                      $value,
+                      $value,
+              $hover-background: shade-color($value, $btn-hover-bg-shade-amount),
+              $hover-border: shade-color($value, $btn-hover-border-shade-amount),
+              $active-background: shade-color($value, $btn-active-bg-shade-amount),
+              $active-border: shade-color($value, $btn-active-border-shade-amount)
+      );
+    } @else if $color == "dark" {
+      @include button-variant(
+                      $value,
+                      $value,
+              $hover-background: tint-color($value, $btn-hover-bg-tint-amount),
+              $hover-border: tint-color($value, $btn-hover-border-tint-amount),
+              $active-background: tint-color($value, $btn-active-bg-tint-amount),
+              $active-border: tint-color($value, $btn-active-border-tint-amount)
+      );
+    } @else {
+      @include button-variant($value, $value);
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
+.btn-circle {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  width:calc(#{$btn-font-size} * #{$btn-line-height} + ((#{$btn-padding-y} + #{$btn-border-width})* 2));
+  height:calc(#{$btn-font-size} * #{$btn-line-height} + ((#{$btn-padding-y} + #{$btn-border-width})* 2));
+  padding-inline: $btn-padding-y;
+
+  &.btn-sm {
+    width:calc(#{$btn-font-size-sm} * #{$btn-line-height} + ((#{$btn-padding-y-sm} + #{$btn-border-width})* 2));
+    height:calc(#{$btn-font-size-sm} * #{$btn-line-height} + ((#{$btn-padding-y-sm} + #{$btn-border-width})* 2));
+    padding-inline: $btn-padding-y-sm;
+  }
+
+  &.btn-lg {
+    width:calc(#{$btn-font-size-lg} * #{$btn-line-height} + ((#{$btn-padding-y-lg} + #{$btn-border-width})* 2));
+    height:calc(#{$btn-font-size-lg} * #{$btn-line-height} + ((#{$btn-padding-y-lg} + #{$btn-border-width})* 2));
+    padding-inline: $btn-padding-y-lg;
+  }
+}
+
+.navbar-btn {
+  padding:  .1875rem 0.5rem .1875rem 0.5rem;
+  border-radius:.375rem;
+  box-shadow:none!important;
+  line-height:1.2;
+}
+
+.btn-show-more {
+  width: 100%;
+  margin-bottom: 84px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 992px) {
+
+  body:not(.layout-mixed) .btn-show-more {
+    width: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 32px;
+  }
+}
+
+.btn-white-dashed{
+  color: black;
+  background-color: white;
+  border: 1px dashed black;
+
+  &.active{
+    border: 1px solid black;
+  }
+}

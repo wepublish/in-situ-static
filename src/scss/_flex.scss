@@ -1,0 +1,9 @@
+.flex-row-fluid {
+  flex: 1 auto;
+  min-width: 0;
+}
+
+.flex-stack {
+  justify-content: space-between;
+  align-items: center;
+}

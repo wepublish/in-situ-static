@@ -1,0 +1,62 @@
+<div class="map-container">
+  <div class="container-fluid py-lg-4 d-flex mb-lg-0 justify-content-between align-items-center filter-sticky-dates-container events-list-header">
+    <div class="my-0" id="event-month"></div>
+    <div class="mb-0 ms-4">
+        180 résultats
+    </div>
+  </div>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21848.44203908469!2d7.142302585847136!3d46.803217464920415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e6ecd8d5a7d2f%3A0xbbe5d1f6b937c32e!2sFribourg!5e0!3m2!1sfr!2sch!4v1662966381196!5m2!1sfr!2sch" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <div class="location-dot" style="position:absolute; top:50%; left:50%; transform:translateX(-50%);">
+      <div class="location-dot-inner">
+        <div style="background-color:#01646A;"></div>
+        <div style="background-color:#FFDF00;"></div>
+        <div style="background-color:#FFAAFF;"></div>
+      </div>
+    </div>
+
+    <div class="is-map-popup" style="top:50%; left:50%;">
+
+      <div class="location-dot">
+        <div class="location-dot-inner">
+          <div style="background-color:#01646A;"></div>
+          <div style="background-color:#FFDF00;"></div>
+          <div style="background-color:#FFAAFF;"></div>
+        </div>
+      </div>
+      <div class="map-popup-body">
+        <div class="fw-bold text-truncate">
+          Ancienne Gare
+        </div>
+        <div class="fs-sm text-truncate">
+          Centre culturel
+        </div>
+      </div>
+      <div class="arrow-wrapper">
+        <svg class="svg-icon" width="9" height="18" viewBox="0 0 9 18" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.43265 1.12345L8.18265 8.58126C8.43901 8.86837 8.43901 9.29892 8.18265 9.58626L1.43265 17.127C1.1139 17.4345 0.682653 17.4594 0.373278 17.1828C0.0498401 16.8884 0.0545278 16.4141 0.317028 16.122L6.61703 9.12501L0.317028 2.12657C0.0415436 1.81748 0.0657305 1.34423 0.372715 1.06626C0.682652 0.790636 1.1139 0.814074 1.43265 1.12345Z"/>
+        </svg>
+      </div>
+    </div>
+
+
+  <div class="map-ui">
+    <div class="d-flex flex-nowrap gap-4">
+      <button class="btn btn-lg btn-white btn-circle">
+        <svg class="svg-icon" width="29" height="29" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg">
+          <path d="M28.458 14.6448C28.458 15.2292 27.9799 15.7073 27.3955 15.7073H15.708V27.3948C15.708 27.9821 15.2328 28.458 14.6455 28.458C14.0582 28.458 13.583 27.9792 13.583 27.3948V15.7073H1.89551C1.30821 15.7073 0.833008 15.2325 0.833008 14.6455C0.833008 14.0605 1.30848 13.5823 1.89551 13.5823H13.583V1.89484C13.583 1.30755 14.0582 0.833008 14.6455 0.833008C15.2328 0.833008 15.708 1.30781 15.708 1.89484V13.5823H27.3955C27.9799 13.5823 28.458 14.0605 28.458 14.6448Z"/>
+        </svg>
+      </button>
+      <button class="btn btn-lg btn-white btn-circle">
+        <svg class="svg-icon" width="29" height="4" viewBox="0 0 29 4" xmlns="http://www.w3.org/2000/svg">
+          <path d="M28.458 2C28.458 2.58438 27.9799 3.0625 27.3955 3.0625H1.89551C1.30821 3.0625 0.833008 2.5877 0.833008 2.00066C0.833008 1.41563 1.30848 0.9375 1.89551 0.9375H27.3955C27.9799 0.9375 28.458 1.41562 28.458 2Z"/>
+        </svg>
+      </button>
+      <button class="btn btn-lg btn-white btn-circle disabled">
+        <svg class="svg-icon" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.3122 14.9997C20.3122 17.9326 17.9326 20.3122 14.9997 20.3122C12.0169 20.3122 9.68717 17.9326 9.68717 14.9997C9.68717 12.0169 12.0169 9.68717 14.9997 9.68717C17.9326 9.68717 20.3122 12.0169 20.3122 14.9997ZM14.9997 11.458C13.0462 11.458 11.458 13.0462 11.458 14.9997C11.458 16.9531 13.0462 18.5413 14.9997 18.5413C16.9531 18.5413 18.5413 16.9531 18.5413 14.9997C18.5413 13.0462 16.9531 11.458 14.9997 11.458ZM14.9997 0.833008C15.4867 0.833008 15.8851 1.22945 15.8851 1.71842V4.4112C21.0482 4.83675 25.1598 8.95117 25.5859 14.1143H28.2809C28.7679 14.1143 29.1663 14.5127 29.1663 14.9997C29.1663 15.4867 28.7679 15.8851 28.2809 15.8851H25.5859C25.1598 21.0482 21.0482 25.1598 15.8851 25.5859V28.2809C15.8851 28.7679 15.4867 29.1663 14.9997 29.1663C14.5127 29.1663 14.1143 28.7679 14.1143 28.2809V25.5859C8.95117 25.1598 4.83675 21.0482 4.4112 15.8851H1.71842C1.22945 15.8851 0.833008 15.4867 0.833008 14.9997C0.833008 14.5127 1.22945 14.1143 1.71842 14.1143H4.4112C4.83675 8.95117 8.95117 4.83675 14.1143 4.4112V1.71842C14.1143 1.22945 14.5127 0.833008 14.9997 0.833008ZM6.14551 14.9997C6.14551 19.8916 10.1077 23.8538 14.9997 23.8538C19.8916 23.8538 23.8538 19.8916 23.8538 14.9997C23.8538 10.1077 19.8916 6.14551 14.9997 6.14551C10.1077 6.14551 6.14551 10.1077 6.14551 14.9997Z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>

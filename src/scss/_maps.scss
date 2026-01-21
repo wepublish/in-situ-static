@@ -1,0 +1,364 @@
+// Used to generate custom utilities
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$colors: map-merge($colors, $custom-colors);
+
+
+//$all-colors: map-merge-multiple($theme-colors, $grays, $blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
+
+$utilities: map-merge(
+                $utilities,
+                (
+                        "color": map-merge(
+                                        map-get($utilities, "color"),
+                                        (
+                                                values: map-merge(
+                                                                map-get(map-get($utilities, "color"), "values"),
+                                                                        (
+                                                                                $theme-colors
+                                                                        ),
+                                                ),
+                                        ),
+                        ),
+                )
+);
+
+$utilities: map-merge(
+                $utilities,
+                (
+                        "border": map-merge(
+                                        map-get($utilities, "border"),
+                                        (
+                                                values: map-merge(
+                                                                map-get(map-get($utilities, "color"), "values"),
+                                                                        (
+                                                                                $theme-colors
+                                                                        ),
+                                                ),
+                                        ),
+                        ),
+                )
+);
+
+$utilities: map-merge(
+                $utilities,
+                (
+                        "background-color": map-merge(
+                                        map-get($utilities, "background-color"),
+                                        (
+                                                values: map-merge(
+                                                                map-get(map-get($utilities, "background-color"), "values"),
+                                                                        (
+                                                                                $theme-colors
+                                                                        ),
+                                                ),
+                                        ),
+                        ),
+                )
+);
+
+$utilities: map-merge(
+                $utilities,
+                (
+                        "text-decoration-hover": (
+                                property: text-decoration,
+                                class: text-decoration,
+                                state: hover focus,
+                                values: none underline line-through,
+                        )
+                )
+);
+/*
+$utilities: map-merge(
+    $utilities,
+    (
+        "text-transform": (
+          property: text-transform,
+          class: text-transform,
+          values: lowercase uppercase capitalize
+        )
+    )
+);*/
+
+/*
+$utilities: map-merge(
+  $utilities,
+  (
+    "text-decoration-hover": (
+      property: text-decoration,
+      class: text-decoration,
+      state: hover focus,
+      values: map-merge(
+        $text-decorations,
+        (
+          "none": none,
+          "underline": underline,
+          "line-through": line-through
+        )
+      )
+    )
+  )
+);*/
+
+$utilities: map-merge(
+                $utilities, (
+                "text-color-hover": (
+                        property: color,
+                        class: text,
+                        state: hover focus,
+                        values: map-merge(
+                                        map-get(map-get($utilities, "color"), "values"),
+                                                (
+                                                        $theme-colors
+                                                )
+                        ),
+                        current-color: currentColor
+                )
+        )
+);
+
+
+$utilities: map-merge(
+                $utilities, (
+                "bg-hover": (
+                        property: background-color,
+                        class: bg,
+                        state: hover focus,
+                        values: map-merge(
+                                        map-get(map-get($utilities, "color"), "values"),
+                                                (
+                                                        $theme-colors
+                                                )
+                        )
+                )
+        )
+);
+
+
+$utilities: map-merge(
+                $utilities, (
+                "gap-x": (
+                        responsive: true,
+                        property: grid-column-gap,
+                        class: gap-x,
+                        values: $spacers,
+                )
+        )
+);
+
+$utilities: map-merge(
+                $utilities, (
+                "gap-y": (
+                        responsive: true,
+                        property: grid-row-gap,
+                        class: gap-y,
+                        values: $spacers,
+                )
+        )
+);
+
+/*
+$utilities: map-merge(
+  $utilities,
+  (
+    "padding-y": map-merge(
+      map-get($utilities, "padding-y"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "padding-y"), "values"),
+          (20: 20rem),
+        ),
+      ),
+    ),
+  )
+);
+*/
+
+
+/*
+"padding-y": (
+      responsive: true,
+      property: padding-top padding-bottom,
+      class: py,
+      values: $spacers
+    )
+ */
+
+
+/*
+$utilities: map-merge(
+  $utilities,
+  (
+    "text-transform": map-merge(
+      map-get($utilities, "text-transform"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "text-transform"), "values"),
+          (transform-none: none),
+        ),
+      ),
+    ),
+  )
+);
+*/
+/*
+"text-transform": (
+      property: text-transform,
+      class: text,
+      values: lowercase uppercase capitalize
+    )
+ */
+
+
+
+
+
+
+
+
+$utilities: map-merge(
+                $utilities, (
+                "border": (
+                        property: border,
+                        values: (
+                                null: $border-width solid $border-color,
+                                0: 0,
+                        )
+                )
+        ),
+
+);
+
+$utilities: map-merge(
+                $utilities, (
+                "border-style": (
+                        property: border-style,
+                        class: bs,
+                        state: hover focus,
+                        values: (
+                                'dotted': dotted,
+                                'dashed': dashed,
+                                'solid': solid
+                        )
+                ),
+                "border-top-style": (
+                        property: border-top-style,
+                        class: bs-top,
+                        state: hover focus,
+                        values: (
+                                'dotted': dotted,
+                                'dashed': dashed,
+                                'solid': solid
+                        )
+                ),
+                "border-end-style": (
+                        property: border-end-style,
+                        class: bs-end,
+                        state: hover focus,
+                        values: (
+                                'dotted': dotted,
+                                'dashed': dashed,
+                                'solid': solid
+                        )
+                ),
+                "border-bottom-style": (
+                        property: border-bottom-style,
+                        class: bs-bottom,
+                        state: hover focus,
+                        values: (
+                                'dotted': dotted,
+                                'dashed': dashed,
+                                'solid': solid
+                        )
+                ),
+                "border-start-style": (
+                        property: border-style,
+                        class: bs-start,
+                        state: hover focus,
+                        values: (
+                                'dotted': dotted,
+                                'dashed': dashed,
+                                'solid': solid
+                        )
+                ),
+                "font-weight": (
+                        property: font-weight,
+                        class: fw,
+                        values: (
+                                light: $font-weight-light,
+                                lighter: $font-weight-lighter,
+                                normal: $font-weight-normal,
+                                semibold: $font-weight-semibold,
+                                bold: $font-weight-bold,
+                                bolder: $font-weight-bolder
+                        )
+                ),
+                "border-color": (
+                        property: border-color,
+                        class: border,
+                        values: map-merge($theme-colors, ("white": $white, current-color: currentColor))
+                ),
+                "overflow-x": (
+                        property: overflow-x,
+                        values: auto hidden visible scroll,
+                ),
+                "font-size": (
+                        responsive: true,
+                        rfs: true,
+                        property: font-size,
+                        class: fs,
+                        values: $font-sizes
+                )
+        ),
+
+);
+
+
+/*
+
+"font-weight": (
+      property: font-weight,
+      class: fw,
+      values: (
+        light: $font-weight-light,
+        lighter: $font-weight-lighter,
+        normal: $font-weight-normal,
+        bold: $font-weight-bold,
+        bolder: $font-weight-bolder
+      )
+    )
+ */
+
+
+/*
+    "border-top": (
+      property: border-top,
+      values: (
+        null: $border-width solid $border-color,
+        0: 0,
+      )
+    ),
+    "border-end": (
+      property: border-right,
+      class: border-end,
+      values: (
+        null: $border-width solid $border-color,
+        0: 0,
+      )
+    ),
+    "border-bottom": (
+      property: border-bottom,
+      values: (
+        null: $border-width solid $border-color,
+        0: 0,
+      )
+    ),
+    "border-start": (
+      property: border-left,
+      class: border-start,
+      values: (
+        null: $border-width solid $border-color,
+        0: 0,
+      )
+    )
+)*/

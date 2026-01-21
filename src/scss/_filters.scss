@@ -1,0 +1,226 @@
+.filter-fixed-wrapper {
+  z-index:30;
+  position:fixed;
+  left: 0;
+  right: 0;
+  top:calc(var(--navbar-mobile-height) + 1rem);
+
+  &.show {
+    .filter-sticky-dates-container {
+      opacity:1;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    left: 204px;
+    top:1rem;
+  }
+
+  @include media-breakpoint-down(lg) {
+
+    &.show {
+      .filter-sticky-dates-container {
+        //height:var(--is-filter-date-height);
+        //max-height:var(--is-filter-date-height);
+        transform:scaleY(1);
+      }
+      .filter-sticky-container {
+        transform:translateY(var(--is-filter-date-height))
+      }
+    }
+
+    &:not(.show) {
+      .filter-sticky-dates-container {
+        //max-height:0;
+        transform:scaleY(0);
+      }
+    }
+
+  }
+}
+
+.filter-fixed-wrapper-spacer {
+  height: 60px;
+}
+
+body.layout-map .filter-fixed-wrapper-map {
+  z-index:30;
+  //margin-top: 24px;
+
+  .events-list-header {
+    margin-top: 24px;
+    font-size: 18px;
+    
+    @include media-breakpoint-down(md) {
+      font-size: 14px;
+    }
+
+    div{
+      padding: 0.5rem 1.25rem;
+      box-shadow: 0px 0.0625em 0.25em rgba(0, 0, 0, 0.33);
+      background: #fff;
+      border-radius: 50rem;
+    }
+  }
+}
+
+body:not(.layout-map) .filter-fixed-wrapper-map {
+  display: none;
+}
+
+/*
+.filter-fixed-wrapper {
+  width:100%;
+  z-index:20;
+  position:fixed;
+  top:var(--navbar-mobile-height);
+
+  @include media-breakpoint-up(lg) {
+    width:calc(100% - var(--is-app-sidebar-width));
+    top:0;
+  }
+}*/
+/*
+.accordion-filters {
+  .actions-btn {
+    position:absolute;
+    left:$accordion-padding-x;
+    top:0;
+    height:100%;
+    width:$filters-actions-btn-width;
+    cursor:pointer;
+    display:flex;
+    z-index:20;
+    transition: color 0.15s ease-in-out;
+
+    svg {
+      position:absolute;
+      width:$filters-icon-width;
+      top:50%;
+      transform:translateY(-50%);
+      opacity:0;
+      transition:opacity 0.15s ease-in-out;
+    }
+
+    &:hover {
+      color:$primary;
+    }
+  }
+
+  .collapsed + .actions-btn {
+    pointer-events: none;
+  }
+
+  .accordion-button {
+    transition: padding-left 0.15s ease-in-out;
+  }
+
+
+  .active {
+
+    .clear {
+      opacity:1;
+    }
+
+    .collapsed+.actions-btn {
+       .clear {
+        opacity:0;
+      }
+       .checked {
+        opacity:1;
+      }
+    }
+
+    .accordion-button {
+      padding-left: calc(#{$filters-actions-btn-width} + #{$accordion-padding-x});
+    }
+  }
+
+  .category-check {
+    position:absolute;
+    z-index:10;
+    left:$accordion-padding-x;
+    top:50%;
+    transform:translateY(-50%);
+    & + .accordion-button {
+      padding-left:calc(#{$form-check-input-width} + #{$accordion-padding-x} + .5rem);
+    }
+  }
+
+}
+*/
+.filter-sticky {
+  padding-inline:.7rem;
+}
+.filter-sticky-container {
+  transition:transform 0.25s ease-in-out;
+}
+.filter-sticky-dates-container {
+  opacity:0;
+  width:100%;
+  transition:opacity 0.25s ease-in-out, transform 0.15s ease-in-out;
+  transform-origin: center top;
+
+  .layout-mixed & {
+    width:50%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    left:0;
+    position:absolute;
+    bottom:0;
+    transform:translateY(100%);
+    pointer-events:none;
+
+    > * {
+      padding:.5rem 1.25rem;
+      box-shadow:$box-shadow;
+      background:$white;
+      border-radius:$border-radius-pill;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    height:var(--is-filter-date-height);
+    position:absolute;
+    top:-1rem;
+    background:$white;
+    box-shadow:$box-shadow;
+    border-top:1px solid $black;
+    overflow:hidden;
+  }
+}
+
+.btn-filter-toggler {
+  &.active {
+    .svg-icon {
+      transform:rotate(45deg);
+    }
+  }
+}
+
+
+.filter-horizontal-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  padding-bottom:.5rem;
+
+
+  @media (hover: hover) {
+    &::-webkit-scrollbar {
+      height: .5rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      box-shadow: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: lightgrey;
+      outline: none;
+    }
+  }
+}

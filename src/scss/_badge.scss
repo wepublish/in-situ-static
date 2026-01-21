@@ -1,0 +1,91 @@
+
+
+
+.badge-event{
+  @extend .rounded-pill;
+  position:relative;
+  white-space:nowrap;
+  color:$badge-event-color; // default color
+
+
+  padding-left:calc(((1em + (2 * #{$badge-padding-y})) - #{$border-width} * 2) + #{$badge-padding-x});
+  border:$border-width solid transparent;
+
+  span {
+    color: $badge-event-color;
+  }
+
+  &:before {
+    content:"";
+    display:block;
+    position:absolute;
+    top:-$border-width;
+    left:-$border-width;
+    //height:calc(1em * #{$line-height} + (2 * #{$badge-padding-y}));
+    //width:calc(1em * #{$line-height} + (2 * #{$badge-padding-y}));
+
+    height:calc(100% + #{$border-width} * 2);
+    aspect-ratio: 1 / 1;
+
+    border-radius:50%;
+    background:currentColor;
+    filter: blur(2px);
+    z-index:2;
+  }
+
+
+  &:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:-$border-width*2;
+    left:-$border-width*2;
+    //height:calc(1em * #{$line-height} + (2 * #{$badge-padding-y}));
+    //width:calc(1em * #{$line-height} + (2 * #{$badge-padding-y}));
+
+    height:calc(100% + #{$border-width} * 4);
+    aspect-ratio: 1 / 1;
+
+    border-radius:50%;
+    background:currentColor;
+    filter: blur(1px);
+    z-index:2;
+  }
+
+
+
+  span:after {
+    content:"";
+    position:absolute;
+    top:-$border-width;
+    left:-$border-width;
+    height:calc(100% + #{$border-width} * 2);
+    width:calc(100% + #{$border-width} * 2);
+    border:$border-width solid $black;
+    @extend .rounded-pill;
+  }
+}
+
+
+.badge-event-empty {
+  padding-left:$badge-padding-x;
+  &:before, &:after {
+    display:none;
+  }
+}
+
+
+// notification badge
+.badge-notif{
+  border-radius: 50%;
+  width:1.83333333333em;
+  height:1.83333333333em;
+  padding:.125em;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  //top:-.25em;
+}
+
+

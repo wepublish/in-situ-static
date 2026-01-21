@@ -1,0 +1,49 @@
+<div class="row gy-8 mb-10">
+
+    <div class="col-12">
+        <h5 class="title-suggestion mb-0">programmation à venir</h5>
+    </div>
+
+    {% for i in range(0, 3) -%}
+    <div class="col-12 d-flex justify-content-between list-suggestion-month">
+        <div>décembre</div>
+        <div>2025</div>
+    </div>
+
+    {% for i in range(0, 4) -%}
+    <div class="col-12 ps-xl-14">
+        <div class="position-relative events-list-link-wrapper">
+            <div class="border-bottom border-current-color pb-2 mb-1 d-flex flex-nowrap align-items-center">
+                <span class="badge badge-time bg-black fw-normal fs-6 py-1 px-2 flex-shrink-0">Lu 22.12</span>
+                <div class="events-list-info-wrapper ms-4 flex-grow-1">
+                    <div class="events-list-info-scroll fs-sm lh-sm d-flex flex-nowrap flex-grow-1 gap-2">
+                        <div class="text-nowrap">
+                            Théâtre de la Prillaz
+                        </div>
+                        <div class="separator border-start border-current-color"></div>
+                        <div class="text-nowrap">
+                            Estavayer-le-Lac
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h5 class="mb-2">
+                <a href="events-reader.html"
+                   class="stretched-link text-reset text-decoration-none">Record Culture
+                    Fest with Ablette
+                    Records and Varia Instruments
+                </a>
+            </h5>
+            <div class="d-flex align-items-start flex-wrap gap-2">
+                <span class="badge badge-event" style="color:#6CFFC1;"><span>arts scéniques</span></span>
+                <span class="badge badge-event" style="color:#FF00FF;"><span>arts scéniques</span></span>
+                <span class="badge badge-event" style="color:#FFB84D;"><span>arts scéniques</span></span>
+                <span class="badge badge-event" style="color:#FF0000;"><span>arts scéniques</span></span>
+            </div>
+        </div>
+    </div>
+    {%- endfor %}
+
+    {%- endfor %}
+</div>
+

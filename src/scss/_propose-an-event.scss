@@ -1,0 +1,69 @@
+.section-propose-an-event {
+  max-width:948px;
+  margin-inline:0;
+}
+
+.step {
+
+  width:90px;
+  height:68px;
+  border:1px solid transparent;
+  border-radius:0.75rem;
+  padding:.675rem;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+
+
+  position:relative;
+  color:$text-muted;
+  &.active, &.passed {
+    color:$black;
+  }
+
+  &.active {
+    border-color:$black;
+  }
+
+  &.passed {
+    background-color:$light;
+    border-color:$light;
+  }
+
+  @include media-breakpoint-down(lg) {
+    &:not(.active) {
+      display:none;
+    }
+  }
+}
+
+.step-link {
+  text-decoration:none;
+  &:hover {
+    text-decoration:underline;
+  }
+}
+
+/*
+.step-inner {
+  border:1px solid $black;
+  border-radius:0.75rem;
+  padding:.675rem;
+}*/
+
+.nav-step {
+
+
+  width:45px;
+  height:68px;
+  border-radius:0.75rem;
+  padding:.675rem;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  background-color:$light;
+
+  @include media-breakpoint-up(lg) {
+    display:none!important;
+  }
+}

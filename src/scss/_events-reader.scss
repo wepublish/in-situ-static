@@ -1,0 +1,154 @@
+.events-reader-main-wrapper {
+
+  @include media-breakpoint-up(xl) {
+    margin-right: var(--events-reader-offset-content-width);
+  }
+
+  &.event-canceled,
+  &.event-postponed,
+  &.event-soldout {
+    .event-title:before {
+      //margin-right:.875rem;
+    }
+
+  }
+
+}
+
+.events-reader-map-container {
+  position:relative;
+  @include media-breakpoint-up(xl){
+    z-index: 100;
+    width:var(--events-reader-offset-content-width);
+    position: fixed;
+    right: 0;
+    top: 0;
+    height:50%;
+    flex: 0 0 auto;
+  }
+  @include media-breakpoint-down(xl){
+    aspect-ratio: 10 / 12;
+  }
+
+  .btn-wrapper {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+  }
+}
+
+.events-reader-gallery-swiper {
+  @include media-breakpoint-up(xl){
+    z-index: 100;
+    width:var(--events-reader-offset-content-width);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height:50%;
+    flex: 0 0 auto;
+  }
+  @include media-breakpoint-down(xl){
+    max-height:512px;
+    aspect-ratio: 1 / 1;
+  }
+  @include media-breakpoint-down(lg){
+
+
+  }
+}
+
+
+.event-time-info-box {
+  line-height:$line-height-sm;
+  background:#F0F0F0;
+  padding:.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align:center;
+  border-radius:.625rem;
+  flex-grow:1;
+}
+
+.over-container{
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  @media (max-width: 576px) {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+}
+
+.row-over {
+  --is-gutter-x: 0.15rem;
+}
+
+.btn-over {
+  padding: 10px 6px 10px 6px;
+  font-size: 12px;
+  line-height: 120%;
+  font-weight: 500;
+
+  transition: color 0.1s ease-in-out;
+
+  svg{
+    min-height: 32px;
+
+    path {
+      transition: fill 0.1s ease-in-out;
+    }
+  }
+
+  // override inherited .btn:hover to apply other style on text instead
+  &:hover {
+    color: #757575;
+    background-color: #fff !important;
+    border-color: #fff !important;
+
+    svg path {
+      fill: #757575;
+    }
+  }
+}
+
+.btn-over-left {
+  border-radius: 16px 0 0 16px;
+}
+
+.btn-over-middle {
+  border-radius: 0;
+}
+
+.btn-over-right {
+  border-radius: 0 16px 16px 0;
+}
+
+.ellipsis-input {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.copy-input-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.title-suggestion {
+  font-size: 1.375rem !important;
+  font-weight: 700;
+  padding-bottom: 8px;
+  border-bottom: 1px black solid;
+}
+
+.list-suggestion-month {
+  font-size: 1.25rem !important;
+  color: #757575;
+}

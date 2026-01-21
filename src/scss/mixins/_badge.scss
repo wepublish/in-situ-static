@@ -1,0 +1,61 @@
+@mixin badge-variant(
+  $circle-background,
+  $color : $black,
+  // $font-size : $font-size-sm,
+  $line-height : 1
+) {
+  @extend .rounded-pill;
+  position:relative;
+  color: $color;
+  white-space:nowrap;
+
+
+  padding-left:calc(((1em * #{$line-height} + (2 * #{$badge-padding-y})) - #{$border-width} * 2) + #{$badge-padding-x} * .75);
+  border:$border-width solid transparent;
+
+  &:before {
+    content:"";
+    display:block;
+    position:absolute;
+    top:-$border-width;
+    left:-$border-width;
+    //height:calc(1em * #{$line-height} + (2 * #{$badge-padding-y}));
+    //width:calc(1em * #{$line-height} + (2 * #{$badge-padding-y}));
+
+    height:calc(100% + #{$border-width} * 2);
+    aspect-ratio: 1 / 1;
+
+    border-radius:50%;
+    background:$circle-background;
+    filter: blur(2px);
+    z-index:2;
+  }
+
+  &:after {
+    content:"";
+    position:absolute;
+    top:-$border-width;
+    left:-$border-width;
+    height:calc(100% + #{$border-width} * 2);
+    width:calc(100% + #{$border-width} * 2);
+    border:$border-width solid $black;
+    @extend .rounded-pill;
+  }
+}
+
+
+/*
+
+  $background,
+  $border,
+  $color: color-contrast($background),
+  $hover-background: if($color == $color-contrast-light, shade-color($background, $btn-hover-bg-shade-amount), tint-color($background, $btn-hover-bg-tint-amount)),
+  $hover-border: if($color == $color-contrast-light, shade-color($border, $btn-hover-border-shade-amount), tint-color($border, $btn-hover-border-tint-amount)),
+  $hover-color: color-contrast($hover-background),
+  $active-background: if($color == $color-contrast-light, shade-color($background, $btn-active-bg-shade-amount), tint-color($background, $btn-active-bg-tint-amount)),
+  $active-border: if($color == $color-contrast-light, shade-color($border, $btn-active-border-shade-amount), tint-color($border, $btn-active-border-tint-amount)),
+  $active-color: color-contrast($active-background),
+  $disabled-background: $background,
+  $disabled-border: $border,
+  $disabled-color: color-contrast($disabled-background)
+ */

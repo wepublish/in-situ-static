@@ -1,0 +1,39 @@
+.img-cover-container {
+  img{
+    display:block;
+    object-fit:cover;
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+  }
+}
+
+
+figcaption {
+  text-align:center;
+  font-size:.75rem;
+  margin-top:.5rem;
+  line-height:$line-height-sm;
+}
+
+.img-event-container {
+    min-height: 168px;
+    max-height: 400px;
+    width:100%;
+    overflow:hidden;
+    border-radius: 6px;
+    
+    @include media-breakpoint-down(md) {
+        min-height: 156px;
+        max-height: 370px;
+    }
+    
+    img {
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        object-position:center;
+    }
+}

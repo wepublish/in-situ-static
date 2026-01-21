@@ -1,0 +1,155 @@
+#layoutSelector {
+  //opacity:0;
+  //min-height: calc(100vh - var(--navbar-mobile-height));
+  display: flex;
+  flex-direction: column;
+
+  &.loaded {
+    //opacity:1;
+  }
+
+
+  padding-bottom: 3rem;
+
+}
+
+
+#layoutSelectorMap {
+  position:fixed;
+  top:0;//var(--navbar-mobile-height);
+  bottom:0;
+  right:0;
+  width:calc((100% - var(--is-app-sidebar-width)) * .5);
+
+
+
+  z-index:15;
+
+  .map-container {
+    position:absolute;
+    inset:0;
+  }
+
+  .layout-map & {
+    width:calc((100% - var(--is-app-sidebar-width)));
+  }
+
+  .layout-list & {
+    border: 0 none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    inset:auto;
+    
+    .img-event-container {
+      display:none;
+    }
+  }
+  
+  .layout-images & {
+    border: 0 none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    inset:auto;
+  }
+}
+
+#layoutSelectorList {
+  .layout-mixed & {
+    width:50%;
+    
+    .img-event-container {
+      display:none;
+    }
+
+    .row:not(.special-row) > * {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+    // special for search input
+    .special-row > div {
+      flex: 0 0 auto;
+      width: 100%;
+      @include media-breakpoint-up(lg) {
+        width: 80%;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 80%;
+      }
+      @include media-breakpoint-up(xxl) {
+        width: 66%;
+      }
+    }
+  }
+
+  .layout-map & {
+    border: 0 none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  .layout-list & {
+    
+    .img-event-container {
+      display:none;
+    }
+  }
+}
+
+.layout-selector-links-wrapper {
+  //@extend .sticky-bottom;
+  position:fixed;
+  z-index:20;
+  bottom:2.5rem;
+  right:calc((100% - var(--is-app-sidebar-width)) * .5);
+  transform:translateX(50%);
+  //margin-top:auto;
+}
+
+.layout-selector-link {
+  @extend .rounded-pill;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  font-size:0.625rem;
+  font-weight:$font-weight-semibold;
+  text-align:center;
+  padding:.25rem;
+  width:3.6875rem;
+  height:3rem;
+  overflow:hidden;
+  transition:background-color .15s ease-in-out;
+  text-decoration:none;
+
+  margin:-.25rem;
+
+  & + &{
+    //margin-left:-.5rem;
+  }
+
+  &:hover, &.active {
+    background-color:#E6E6E6;
+  }
+  
+  @include media-breakpoint-up(lg) {
+    font-size:0.75rem;
+    width:4.25rem;
+    height:3.5rem;
+  }
+}
+

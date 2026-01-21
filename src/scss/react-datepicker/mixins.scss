@@ -1,0 +1,96 @@
+%navigation-chevron {
+  //border-color: $datepicker__muted-color;
+  //border-style: solid;
+  //border-width: 1px 1px 0 0;
+  content: "";
+  display: block;
+  //height: 9px;
+  position: absolute;
+  //top: 6px;
+  //width: 9px;
+
+  &--disabled,
+  &--disabled:hover {
+    //border-color: $datepicker__navigation-disabled-color;
+    cursor: default;
+  }
+
+
+  //<svg width="7" height="14" viewBox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+  //<path d="M1.69949 0.905087L6.76199 6.49845C6.95426 6.71378 6.95426 7.03669 6.76199 7.2522L1.69949 12.9078C1.46043 13.1384 1.13699 13.157 0.904958 12.9496C0.66238 12.7288 0.665896 12.3731 0.862771 12.154L5.58777 6.90626L0.862772 1.65743C0.656158 1.42561 0.674299 1.07067 0.904537 0.862196C1.13699 0.655477 1.46043 0.673055 1.69949 0.905087Z" fill="white"/>
+  //</svg>
+  //background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>");
+  background:url("data:image/svg+xml,  <svg width='7' height='14' viewBox='0 0 7 14' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1.69949 0.905087L6.76199 6.49845C6.95426 6.71378 6.95426 7.03669 6.76199 7.2522L1.69949 12.9078C1.46043 13.1384 1.13699 13.157 0.904958 12.9496C0.66238 12.7288 0.665896 12.3731 0.862771 12.154L5.58777 6.90626L0.862772 1.65743C0.656158 1.42561 0.674299 1.07067 0.904537 0.862196C1.13699 0.655477 1.46043 0.673055 1.69949 0.905087Z' fill='%23FFF'/></svg>");
+  width:7px;
+  height:13px;
+  border:0;
+
+
+}
+
+%triangle-arrow {
+  margin-left: -$datepicker__triangle-size * 0.5;
+  position: absolute;
+  width: 0;
+
+  &::before,
+  &::after {
+    box-sizing: content-box;
+    position: absolute;
+    border: $datepicker__triangle-size solid transparent;
+    height: 0;
+    width: 1px;
+    content: "";
+    z-index: -1;
+    border-width: $datepicker__triangle-size;
+    left: -$datepicker__triangle-size;
+  }
+
+  &::before {
+    border-bottom-color: $datepicker__border-color;
+  }
+}
+
+%triangle-arrow-up {
+  @extend %triangle-arrow;
+
+  top: 0;
+  margin-top: -$datepicker__triangle-size;
+
+  &::before,
+  &::after {
+    border-top: none;
+    border-bottom-color: $datepicker__background-color;
+  }
+
+  &::after {
+    top: 0;
+  }
+
+  &::before {
+    top: -1px;
+    border-bottom-color: $datepicker__border-color;
+  }
+}
+
+%triangle-arrow-down {
+  @extend %triangle-arrow;
+
+  bottom: 0;
+  margin-bottom: -$datepicker__triangle-size;
+
+  &::before,
+  &::after {
+    border-bottom: none;
+    border-top-color: #fff;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &::before {
+    bottom: -1px;
+    border-top-color: $datepicker__border-color;
+  }
+}

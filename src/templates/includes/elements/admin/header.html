@@ -1,0 +1,123 @@
+<header class="header">
+    <nav class="navbar navbar-admin navbar-expand navbar-light bg-white border-bottom border-black">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="{% static 'img/logo-insitu-horizontal.svg' %}" alt="Logo in situ" width="100"></a>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <div>
+                    <a href="#" class="btn btn-sm btn-light navbar-btn">
+                        <span class="d-none d-md-inline">Visiter in-situ.org</span><svg class="ms-md-2" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.7221 6.29578L7.40149 11.1078C7.31555 11.2035 7.17491 11.25 7.08116 11.25C6.97735 11.25 6.87312 11.2124 6.79051 11.1364C6.61412 10.974 6.60104 10.6973 6.76139 10.5187L10.4251 6.43796H0.598686C0.359842 6.43796 0.166626 6.24233 0.166626 6.0251C0.166626 5.80788 0.359894 5.56304 0.598686 5.56304H10.4249L6.76056 1.48101C6.60021 1.30244 6.61329 1.0255 6.78968 0.86337C6.96649 0.701893 7.23945 0.713841 7.4004 0.893281L11.721 5.70532C11.8705 5.87199 11.8705 6.129 11.7221 6.29578Z" fill="black"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="ms-auto d-flex align-items-center">
+                    <!--<div class="navbar-text text-muted d-none d-md-flex flex-nowrap gap-4 align-items-center me-2">
+                        <div>jeremy@in-situ.org</div>
+                        <div>|</div>
+                    </div>-->
+                    <ul class="navbar-nav navbar-splitted">
+                        <li class="nav-item dropdown d-none d-md-inline-block">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                jeremy@in-situ.org
+                            </a>
+                            <ul class="dropdown-menu min-w-auto fs-sm">
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        Déconnexion
+                                        <svg class="svg-icon ms-2" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.8715 6.64687L9.93398 2.14687C9.76309 1.95156 9.48609 1.95156 9.31547 2.14687C9.14484 2.34219 9.14457 2.65875 9.31547 2.85375L12.507 6.5H4.8125C4.57187 6.5 4.375 6.725 4.375 7C4.375 7.275 4.57067 7.5 4.8125 7.5H12.507L9.31602 11.1469C9.14512 11.3422 9.14512 11.6588 9.31602 11.8538C9.48691 12.0488 9.76391 12.0491 9.93453 11.8538L13.872 7.35375C13.9563 7.25625 14 7.12812 14 7C14 6.87188 13.9562 6.74375 13.8715 6.64687ZM4.8125 13H2.1875C1.46371 13 0.875 12.3281 0.875 11.5V2.5C0.875 1.67281 1.46371 1 2.1875 1H4.8125C5.05313 1 5.25 0.77625 5.25 0.5C5.25 0.22375 5.05313 0 4.8125 0H2.1875C0.981094 0 0 1.12125 0 2.5V11.5C0 12.8781 0.981094 14 2.1875 14H4.8125C5.05313 14 5.25 13.775 5.25 13.5C5.25 13.225 5.05313 13 4.8125 13Z"/>
+                                        </svg>
+
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Gestion
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end fs-sm">
+                                <li>
+                                    <a class="dropdown-item d-flex flex-nowrap" href="#">
+                                        <div class="flex-grow-1">
+                                            Événements
+                                        </div>
+                                        <div class="flex-shrink-0 ms-2">
+                                            <svg class="svg-icon" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.50254 0.40567L5.44004 4.75606C5.58959 4.92354 5.58959 5.17469 5.44004 5.34231L1.50254 9.7411C1.31661 9.92048 1.06504 9.93497 0.884575 9.77364C0.695903 9.60192 0.698637 9.3252 0.851762 9.15485L4.52676 5.07325L0.851762 0.990828C0.691063 0.810523 0.705172 0.534459 0.884246 0.372311C1.06504 0.21153 1.31661 0.225202 1.50254 0.40567Z" />
+                                            </svg>
+                                        </div>
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex flex-nowrap" href="#">
+                                        <div class="flex-grow-1">
+                                            Lieux
+                                        </div>
+                                        <div class="flex-shrink-0 ms-2">
+                                            <svg class="svg-icon" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.50254 0.40567L5.44004 4.75606C5.58959 4.92354 5.58959 5.17469 5.44004 5.34231L1.50254 9.7411C1.31661 9.92048 1.06504 9.93497 0.884575 9.77364C0.695903 9.60192 0.698637 9.3252 0.851762 9.15485L4.52676 5.07325L0.851762 0.990828C0.691063 0.810523 0.705172 0.534459 0.884246 0.372311C1.06504 0.21153 1.31661 0.225202 1.50254 0.40567Z"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex flex-nowrap" href="#">
+                                        <div class="flex-grow-1">
+                                         Organismes
+                                        </div>
+                                        <div class="flex-shrink-0 ms-2">
+                                            <svg class="svg-icon" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.50254 0.40567L5.44004 4.75606C5.58959 4.92354 5.58959 5.17469 5.44004 5.34231L1.50254 9.7411C1.31661 9.92048 1.06504 9.93497 0.884575 9.77364C0.695903 9.60192 0.698637 9.3252 0.851762 9.15485L4.52676 5.07325L0.851762 0.990828C0.691063 0.810523 0.705172 0.534459 0.884246 0.372311C1.06504 0.21153 1.31661 0.225202 1.50254 0.40567Z"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex flex-nowrap" href="#">
+                                        <div class="flex-grow-1">
+                                            Utilisateur·rice·x·s
+                                        </div>
+                                        <div class="flex-shrink-0 ms-2">
+                                            <svg class="svg-icon" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.50254 0.40567L5.44004 4.75606C5.58959 4.92354 5.58959 5.17469 5.44004 5.34231L1.50254 9.7411C1.31661 9.92048 1.06504 9.93497 0.884575 9.77364C0.695903 9.60192 0.698637 9.3252 0.851762 9.15485L4.52676 5.07325L0.851762 0.990828C0.691063 0.810523 0.705172 0.534459 0.884246 0.372311C1.06504 0.21153 1.31661 0.225202 1.50254 0.40567Z"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item d-flex flex-nowrap" href="#">
+                                        <div class="flex-grow-1">
+                                            Archive des événements
+                                        </div>
+                                        <div class="flex-shrink-0 ms-2">
+                                            <svg class="svg-icon" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.50254 0.40567L5.44004 4.75606C5.58959 4.92354 5.58959 5.17469 5.44004 5.34231L1.50254 9.7411C1.31661 9.92048 1.06504 9.93497 0.884575 9.77364C0.695903 9.60192 0.698637 9.3252 0.851762 9.15485L4.52676 5.07325L0.851762 0.990828C0.691063 0.810523 0.705172 0.534459 0.884246 0.372311C1.06504 0.21153 1.31661 0.225202 1.50254 0.40567Z"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Fr
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end min-w-auto fs-sm">
+                                <li><a class="dropdown-item" href="#">Deutsch</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="#" class="navbar-logout-link d-md-none">
+                        <svg class="svg-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.8715 6.64687L9.93398 2.14687C9.76309 1.95156 9.48609 1.95156 9.31547 2.14687C9.14484 2.34219 9.14457 2.65875 9.31547 2.85375L12.507 6.5H4.8125C4.57187 6.5 4.375 6.725 4.375 7C4.375 7.275 4.57067 7.5 4.8125 7.5H12.507L9.31602 11.1469C9.14512 11.3422 9.14512 11.6588 9.31602 11.8538C9.48691 12.0488 9.76391 12.0491 9.93453 11.8538L13.872 7.35375C13.9563 7.25625 14 7.12812 14 7C14 6.87188 13.9562 6.74375 13.8715 6.64687ZM4.8125 13H2.1875C1.46371 13 0.875 12.3281 0.875 11.5V2.5C0.875 1.67281 1.46371 1 2.1875 1H4.8125C5.05313 1 5.25 0.77625 5.25 0.5C5.25 0.22375 5.05313 0 4.8125 0H2.1875C0.981094 0 0 1.12125 0 2.5V11.5C0 12.8781 0.981094 14 2.1875 14H4.8125C5.05313 14 5.25 13.775 5.25 13.5C5.25 13.225 5.05313 13 4.8125 13Z"/>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+</header>

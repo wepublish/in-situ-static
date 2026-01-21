@@ -1,0 +1,37 @@
+.layout-sidebar {
+  #app {
+    @include media-breakpoint-down(lg) {
+      padding-top:var(--navbar-mobile-height);
+    }
+    @include media-breakpoint-up(lg) {
+      margin-left: var(--is-app-sidebar-width);//calc(var(--is-app-sidebar-width) + var(--is-app-sidebar-gap-start, 0px) + var(--is-app-sidebar-gap-end, 0px));
+    }
+  }
+}
+
+/*
+.layout-map {
+  #app {
+    @include media-breakpoint-down(lg) {
+      padding-top:0;
+    }
+  }
+}*/
+
+.layout-fullwidth {
+  #app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height:100%;
+  }
+
+  footer {
+    margin-top:auto;
+  }
+}
+
+body.propose-event {
+  height: auto!important;
+  min-height: 750px;
+}

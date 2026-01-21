@@ -1,0 +1,12 @@
+@import "mixins/components";
+@import "mixins/badge";
+@import "mixins/buttons";
+
+
+%heading-sm {
+  font-size:1.125rem;
+  font-style: italic;
+  font-family:$font-family-serif;
+  font-weight:$font-weight-light;
+  margin-bottom:.5rem;
+}

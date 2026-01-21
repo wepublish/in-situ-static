@@ -1,0 +1,23 @@
+{% extends 'layout-cover.html' %}
+{% block content %}
+    <div class="login-box my-auto py-12">
+        <img class="mb-10" src="{% static 'img/logo-insitu-horizontal.svg' %}" alt="Logo in situ" width="240">
+        <div class="pb-12 border-bottom border-black">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Login</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div>
+                    <label class="form-label">Mot de passe</label>
+                    <input type="password" class="form-control">
+                </div>
+                <div class="d-grid pt-8">
+                    <button type="submit" class="btn btn-black">Login</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

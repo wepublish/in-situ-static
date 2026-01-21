@@ -1,0 +1,546 @@
+{% extends 'layout-fullwidth.html' %}
+
+{% block content %}
+{% include 'elements/alert.html' %}
+<div class="container py-18">
+    <div class="d-flex flex-column flex-wrap gap-10">
+        <div class="row row-cols-lg-2 gy-10">
+            <div>
+                <h1>Gestion des événements</h1>
+                <p>
+                    La liste d'événements ci-dessous correspond à tous les événements publiés, à valider, ou brouillons.
+                    Vous ne pouvez éditer que ceux dont vous êtes l’organisateur·trice·x ou ceux qui prennent place dans
+                    un lieu dont vous êtes responsable. Une fois publié, votre événement est listé dans la page “agenda”
+                    de la plateforme.
+                </p>
+            </div>
+            <div class="d-flex justify-content-lg-end">
+                <div class="d-flex flex-nowrap">
+                    <div class="flex-shrink-0 me-3">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25 27.3438C23.9219 27.3438 23.0469 28.2181 23.0469 29.2969C23.0469 30.3711 23.8379 31.25 25 31.25C26.1621 31.25 26.9531 30.3755 26.9531 29.2969C26.9531 28.1348 26.0742 27.3438 25 27.3438ZM43.75 0H6.25C2.80762 0 0 2.80762 0 6.16211V34.1992C0 37.8125 2.80762 40.5371 6.25 40.5371H15.625V48.6523C15.625 49.6131 16.7021 50.166 17.4922 49.5946L29.6875 40.5371H43.75C47.1924 40.5371 50 37.7295 50 34.375V6.16211C50 2.80762 47.1973 0 43.75 0ZM46.875 34.375C46.875 36.0938 45.4688 37.5 43.75 37.5H29.6777C29.0012 37.5 28.3428 37.7195 27.8018 38.1256L18.75 44.9219V39.0625C18.75 38.1994 18.0504 37.5 17.1875 37.5H6.25C4.53125 37.5 3.125 36.0938 3.125 34.375V6.25C3.125 4.53125 4.53125 3.125 6.25 3.125H43.75C45.4688 3.125 46.875 4.53125 46.875 6.25V34.375ZM27.1582 9.375H22.4316C19.541 9.375 17.1875 11.7285 17.1875 14.6094C17.1875 15.473 17.8863 16.1719 18.75 16.1719C19.6137 16.1719 20.3125 15.473 20.3125 14.6094C20.3125 13.4473 21.2598 12.5 22.4316 12.5H27.165C28.5547 12.5 29.6875 13.6328 29.6875 15.0293C29.6875 15.9937 29.1534 16.8604 28.2686 17.3018L24.2773 19.3652C23.7598 19.6387 23.4375 20.1758 23.4375 20.752V23.4375C23.4375 24.2969 24.1406 25 25 25C25.8594 25 26.5625 24.3012 26.5625 23.4375V21.709L29.6875 20.0869C31.6162 19.1226 32.8125 17.1807 32.8125 15.0264C32.8125 11.9043 30.2734 9.375 27.1582 9.375Z"
+                                  fill="black"/>
+                        </svg>
+                    </div>
+                    <div class="lh-sm">
+                        <strong>Une question, un bug, besoin d’aide?</strong><br>
+                        Contactez notre administrateur<br>
+                        <a href="mailto:support@in-situ.org">support@in-situ.org</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <h4>h4</h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam neque justo, scelerisque eu urna eget,
+                euismod blandit dolor. Fusce elementum, ex quis ultricies feugiat, velit tellus dapibus elit, et tempus
+                odio odio at lacus. Ut facilisis pulvinar accumsan. Vestibulum sit amet enim a enim semper semper vitae
+                a ex. Morbi lacinia felis nulla, ut egestas arcu sodales non. Cras in convallis leo. Quisque vitae nisl
+                eget urna consequat lobortis in vel risus. Fusce nulla enim, rhoncus non lobortis at, rhoncus vel
+                sapien. Mauris vel lobortis nibh. Praesent ullamcorper in dolor eleifend egestas. Quisque vitae mauris
+                imperdiet, gravida ex a, efficitur felis.
+            </p>
+        </div>
+        <div class="mb-10">
+            <form>
+                <div class="row gx-5 gy-5 row-cols-lg-2 mb-5">
+                    <div>
+                        <select class="form-select js-choice">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select class="form-select js-choice">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select class="form-select js-choice">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select class="form-select js-choice">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-black">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+        <!-- start tabs -->
+        <div class="mb-3 multilang-collection">
+            <div class="row row-cols-xl-2 gx-5 gy-5">
+                <div>
+
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                           placeholder="name@example.com">
+
+                </div>
+                <div>
+                    <div>
+                        <div class="d-flex justify-content-between">
+                            <label class="form-label">Sous-titre (facultatif)</label>
+                            <ul class="nav nav-pills flex-nowrap mt-n1" id="organization_subTitle_nav_tab"
+                                role="tablist">
+                                <li class="nav-item me-1" role="presentation">
+                                    <a class="nav-link active d-flex align-items-center"
+                                       id="organization_subTitle_fr-tab" data-bs-toggle="tab"
+                                       href="#organization_subTitle_fr_tab" role="tab"
+                                       aria-controls="organization_subTitle_fr_tab" aria-selected="true">fr
+                                        <svg class="svg-icon" width="10" height="8" viewBox="0 0 10 8" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.07588 2.42724C9.45954 2.03939 9.45954 1.40601 9.07588 1.01816C8.69223 0.630309 8.06571 0.630309 7.68206 1.01816L3.87366 4.86822L2.31792 3.29546C1.93427 2.90761 1.30775 2.90761 0.924094 3.29546C0.540439 3.68331 0.540439 4.31669 0.924094 4.70454L3.17675 6.98184C3.5604 7.36969 4.18692 7.36969 4.57058 6.98184L9.07588 2.42724Z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link d-flex align-items-center" id="organization_subTitle_de-tab"
+                                       data-bs-toggle="tab" href="#organization_subTitle_de_tab" role="tab"
+                                       aria-controls="organization_subTitle_de_tab" aria-selected="false" tabindex="-1">de
+                                        <svg class="svg-icon" width="10" height="8" viewBox="0 0 10 8" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.07588 2.42724C9.45954 2.03939 9.45954 1.40601 9.07588 1.01816C8.69223 0.630309 8.06571 0.630309 7.68206 1.01816L3.87366 4.86822L2.31792 3.29546C1.93427 2.90761 1.30775 2.90761 0.924094 3.29546C0.540439 3.68331 0.540439 4.31669 0.924094 4.70454L3.17675 6.98184C3.5604 7.36969 4.18692 7.36969 4.57058 6.98184L9.07588 2.42724Z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="tab-content" id="organization_subTitle_tab_content">
+                                <div class="tab-pane fade show active" id="organization_subTitle_fr_tab" role="tabpanel"
+                                     aria-labelledby="organization_subTitle_fr-tab"><input type="text"
+                                                                                           id="organization_subTitle_fr"
+                                                                                           name="organization[subTitle][fr]"
+                                                                                           placeholder="Where the hell is Bad Bonn?"
+                                                                                           maxlength="85"
+                                                                                           class="form-control"
+                                                                                           value="Ablette"></div>
+                                <div class="tab-pane fade" id="organization_subTitle_de_tab" role="tabpanel"
+                                     aria-labelledby="organization_subTitle_de-tab"><input type="text"
+                                                                                           id="organization_subTitle_de"
+                                                                                           name="organization[subTitle][de]"
+                                                                                           placeholder="Where the hell is Bad Bonn?"
+                                                                                           maxlength="85"
+                                                                                           class="form-control"
+                                                                                           value="Ablette"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <p id="organization_subTitle_help" class="form-text mb-0 help-text">Slogan ou autre info relatif à
+                        l'organisme (ex. Centre culturel, Loud &amp; Proud since 1983, etc...)</p>
+                </div>
+                <div class="d-flex justify-content-start flex-wrap recurrence-week-days gap-8 mt-8">
+                    <div class="form-check">
+                        <input type="checkbox" name=".." class="form-check-input">
+                        <label class="form-check-label" for="..">Lundi</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name=".." class="form-check-input">
+                        <label class="form-check-label" for="..">Mardi</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name=".." class="form-check-input">
+                        <label class="form-check-label" for="..">Mercredi</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name=".." class="form-check-input">
+                        <label class="form-check-label" for="..">Jeudi</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name=".." class="form-check-input">
+                        <label class="form-check-label" for="..">Vendredi</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name=".." class="form-check-input">
+                        <label class="form-check-label" for="..">Samedi</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name=".." class="form-check-input">
+                        <label class="form-check-label" for="..">Dimanche</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- stop tabs -->
+
+        <div class="mb-10">
+            <div class="row">
+                <div class="col d-flex justify-content-between">
+                    <div>
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-primary">
+                                Créer un événement
+                                <i class="fa-solid fa-plus"></i>
+                            </a>
+                        </div>
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-white-dashed">
+                                Afficher mes événements
+                                <i class="ms-2 fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-white-dashed active">
+                                Afficher mes événements
+                                <i class="ms-2 fa-light fa-xmark-large"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row special-row">
+                        <div class="col-12 position-relative">
+                            <input type="text" id="custom-search-input"
+                                   class="form-control form-control-search rounded-pill"
+                                   placeholder="rechercher dans la liste">
+                            <img id="search-input-img" src="{% static 'img/input-search.svg' %}" alt="Rechercher"
+                                 width="20" height="20">
+                            <button id="clear-search-input">
+                                <img src="{% static 'img/input-cross.svg' %}" alt="Effacer" width="15" height="15">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-10">
+            <div class="row">
+                <div class="col">
+                    <div class="btn-group">
+                        <button role="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#eventDatesSoleModal">
+                            Modal dates événement seul
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button role="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#eventDatesMultipleModal">
+                            Modal dates événement multiple perso
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button role="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#eventDatesWeekModal">
+                            Modal dates événement multiple hebdo
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button role="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#eventProposalModal">
+                            Modal propositions événement
+                        </button>
+                    </div>
+
+                    <div class="modal modal-lg fade" id="eventDatesSoleModal" tabindex="-1"
+                         aria-labelledby="eventDatesSoleModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content modal-info-event-admin">
+                                <div class="modal-body text-center">
+
+                                    <div class="row modal-info-event-admin-title">
+                                        <div class="col-12">
+                                            <div id="eventDatesSoleModalLabel">
+                                                Nom de l'événement
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row gy-3 mb-8">
+                                        <div class="col-12">
+                                            <div class="col-12 fw-semibold font-18px">
+                                                Dates de l’événement
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 font-18px">
+                                            Mercredi 26.09 – Dimanche 30.09.2025
+                                        </div>
+
+                                        <div class="col-12 p-4 px-11">
+                                            <div class="row gx-4">
+                                                <div class="d-flex col">
+                                                    <div class="event-time-info-box">
+                                                        <div class="fs-5">
+                                                            21:00
+                                                        </div>
+                                                        <div>
+                                                            ouverture
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex col">
+                                                    <div class="event-time-info-box">
+                                                        <div class="fs-5">
+                                                            21:00
+                                                        </div>
+                                                        <div>
+                                                            début
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex col">
+                                                    <div class="event-time-info-box">
+                                                        <div class="fs-5">
+                                                            21:00
+                                                        </div>
+                                                        <div>
+                                                            fermeture
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <button class="btn btn-primary" data-bs-dismiss="modal">Fermer</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modal modal-lg fade" id="eventDatesMultipleModal" tabindex="-1"
+                         aria-labelledby="eventDatesMultipleModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content modal-info-event-admin">
+                                <div class="modal-body text-center">
+
+                                    <div class="row modal-info-event-admin-title">
+                                        <div class="col-12">
+                                            <div id="eventDatesMultipleModalLabel">
+                                                Nom de l'événement
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row gy-3 mb-8">
+                                        <div class="col-12">
+                                            <div class="col-12 fw-semibold font-18px">
+                                                Horaire récurrent personnalisé
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 p-4 px-11">
+                                            <div class="row gx-4">
+                                                <div class="d-flex col">
+                                                    <div class="event-time-info-box">
+                                                        <div class="fs-5">
+                                                            21:00
+                                                        </div>
+                                                        <div>
+                                                            ouverture
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex col">
+                                                    <div class="event-time-info-box">
+                                                        <div class="fs-5">
+                                                            21:00
+                                                        </div>
+                                                        <div>
+                                                            début
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex col">
+                                                    <div class="event-time-info-box">
+                                                        <div class="fs-5">
+                                                            21:00
+                                                        </div>
+                                                        <div>
+                                                            fermeture
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 font-18px">
+                                            <div class="modal-info-row-border">Me 26.09.2028</div>
+                                            <div class="modal-info-row-border">Je 27.09.2028</div>
+                                            <div class="modal-info-row-border">Ve 28.09.2028</div>
+                                            <div class="modal-info-row-border">Sa 29.09.2028</div>
+                                            <div>Di 30.09.2028</div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <button class="btn btn-primary" data-bs-dismiss="modal">Fermer</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modal modal-lg fade" id="eventDatesWeekModal" tabindex="-1"
+                         aria-labelledby="eventDatesWeekModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content modal-info-event-admin">
+                                <div class="modal-body text-center">
+
+                                    <div class="row modal-info-event-admin-title">
+                                        <div class="col-12">
+                                            <div id="eventDatesWeekModalLabel">
+                                                Nom de l'événement
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row gy-3 mb-8">
+                                        <div class="col-12">
+                                            <div class="col-12 fw-semibold font-18px">
+                                                Horaire récurrent hébdomadaire
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 font-18px">
+                                            26.09 – 30.09.2025
+                                        </div>
+
+                                        <div class="col-12 font-18px">
+                                            Mercredi, jeudi, vendredi, samedi
+                                        </div>
+
+                                        <div class="col-12 p-4 px-11">
+                                            <div class="row gx-4">
+                                                <div class="d-flex col">
+                                                    <div class="event-time-info-box">
+                                                        <div class="fs-5">
+                                                            21:00
+                                                        </div>
+                                                        <div>
+                                                            ouverture
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex col">
+                                                    <div class="event-time-info-box">
+                                                        <div class="fs-5">
+                                                            21:00
+                                                        </div>
+                                                        <div>
+                                                            début
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex col">
+                                                    <div class="event-time-info-box">
+                                                        <div class="fs-5">
+                                                            21:00
+                                                        </div>
+                                                        <div>
+                                                            fermeture
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <button class="btn btn-primary" data-bs-dismiss="modal">Fermer</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modal modal-lg fade" id="eventProposalModal" tabindex="-1"
+                         aria-labelledby="eventProposalModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content modal-info-event-admin">
+                                <div class="modal-body text-center">
+
+                                    <div class="row modal-info-event-admin-title">
+                                        <div class="col-12">
+                                            <div id="eventProposalModalLabel">
+                                                Nom de l'événement
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row gy-3 mb-8">
+                                        <div class="col-12">
+                                            <div class="col-12 fw-semibold font-18px">
+                                                Coordonnées de la proposition
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 font-18px">
+                                            <div class="modal-info-row-border">
+                                                <span class="text-greyed">Nom Prénom</span>
+                                                Küng Jeremy
+                                            </div>
+                                            <div class="modal-info-row-border">
+                                                <span class="text-greyed">Email</span>
+                                                email@ik.me
+                                            </div>
+                                            <div class="modal-info-row-border">
+                                                <span class="text-greyed">Téléphone</span>
+                                                0793456789
+                                            </div>
+                                            <div>
+                                                <span class="text-greyed">Votre organisme</span>
+                                                In Situ Association
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <button class="btn btn-primary" data-bs-dismiss="modal">Fermer</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

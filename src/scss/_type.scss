@@ -1,0 +1,40 @@
+h1, h2, h3 {
+  margin-bottom:$headings-margin-bottom * 1.5;
+  font-family: $font-family-serif;
+  font-style: italic;
+}
+
+.h1 {
+  @extend h1
+}
+
+.h2 {
+  @extend h2
+}
+
+.h3 {
+  @extend h3
+}
+/*
+.headlines-normalized-h5 {
+  h1, h2, h3, h4, h6,
+  .h1, .h2, .h3, .h4, .h6 {
+    @extend h5;
+  }
+}
+*/
+
+/*
+
+h2, h3, .h3, .h2 {
+  color:red!Important;
+  border:5px solid blue;
+}
+*/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  small {
+    font-size:60%;
+    display:block;
+  }
+}

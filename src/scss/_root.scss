@@ -1,0 +1,47 @@
+:root {
+  --shadow-hue : 0deg;
+  --shadow-saturation : 0%;
+  --shadow-lightness : 50%;
+
+  --is-app-sidebar-width: 204px;
+  --is-app-sidebar-gap-start: 1.5rem;
+  --is-app-sidebar-gap-end: 1.5rem;
+
+  --is-app-nav-main-link-font-size: 2.1875rem;
+  --is-app-nav-main-link-line-height: 1.15;
+  --is-app-nav-main-link-font-weight: 400;
+
+  --is-app-nav-main-link-font-size-sm: .875rem;
+  --is-app-nav-main-link-line-height-sm: 1.28;
+
+  --is-app-nav-main-link-font-size-lg: 2.8125rem;
+  --is-app-nav-main-link-line-height-lg: 1.28;
+
+  --events-reader-offset-content-width:max(400px, calc((100vw - var(--is-app-sidebar-width)) / 3));// calc((100vw - var(--is-app-sidebar-width)) / 3);
+
+
+  --navbar-mobile-height: 60px;
+
+  --is-filter-date-height: 28px;
+
+  --location-dot-width: 35px;
+  --location-dot-height: 35px;
+
+
+  --reader-icon-width: 40px;
+  --reader-icon-list-items-by-line: 4;
+  --reader-icon-list-gap: .75rem;
+
+
+
+
+  @include media-breakpoint-down(lg) {
+    --is-app-sidebar-width: 0px;
+
+  }
+
+  @include media-breakpoint-up(lg) {
+    --navbar-mobile-height : 0px;
+  }
+}
+

@@ -1,0 +1,126 @@
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true" data-bs-backdrop="false">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <a href="#" class="text-decoration-none fs-lg text-black d-inline-flex align-items-center text-primary-hover" role="button" data-bs-dismiss="modal" aria-label="Close">
+          Fermer
+          <svg class="svg-icon ms-2" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.584 16.0836C16.2517 16.4159 15.708 16.4159 15.3757 16.0836L8.72987 9.43776L2.08404 16.0836C1.75009 16.4175 1.20928 16.4179 0.87533 16.084C0.541377 15.75 0.543416 15.2076 0.875708 14.8753L7.52154 8.22943L0.875707 1.5836C0.541754 1.24965 0.541527 0.709449 0.875329 0.375647C1.208 0.0429778 1.75024 0.0414674 2.08404 0.375269L8.72987 7.0211L15.3757 0.375269C15.7097 0.0413158 16.2497 0.0416932 16.5837 0.375646C16.9176 0.709599 16.9178 1.2498 16.584 1.5836L9.9382 8.22943L16.584 14.8753C16.9163 15.2076 16.9163 15.7513 16.584 16.0836Z" />
+          </svg>
+        </a>
+      </div>
+      <div class="modal-body">
+        <h4 class="fs-1 ff-serif">
+          Rechercher
+        </h4>
+        <div class="d-flex flex-wrap gap-2 mb-8">
+          <div class="badge bg-secondary text-black rounded-pill fs-lg">des événements</div>
+          <div class="badge bg-secondary text-black rounded-pill fs-lg">des lieux</div>
+          <div class="badge bg-secondary text-black rounded-pill fs-lg">des articles</div>
+        </div>
+        <div class="mb-8">
+          <div class="position-relative search-input-wrapper">
+            <input class="form-control py-2 form-control-lg fs-4 rounded-pill ps-15 pe-6" type="text" placeholder="Saisissez des mots clés..." aria-label="Saisissez des mots clés...">
+            <div class="px-5 py-0 position-absolute top-50 start-0 translate-middle-y">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25.2692 24.167L18.3604 17.2578C19.8838 15.4805 20.7675 13.1807 20.7675 10.6562C20.7675 5.0459 16.2204 0.5 10.6118 0.5C5.0032 0.5 0.5 5.04736 0.5 10.6562C0.5 16.2651 5.04665 20.8125 10.6118 20.8125C13.1351 20.8125 15.4382 19.8867 17.213 18.3638L24.1218 25.2729C24.3171 25.4219 24.5173 25.5 24.7175 25.5C24.9177 25.5 25.1173 25.4237 25.2697 25.2711C25.5768 24.9678 25.5768 24.4697 25.2692 24.167ZM10.6557 19.25C5.87571 19.25 2.06243 15.3926 2.06243 10.6562C2.06243 5.91992 5.87571 2.0625 10.6557 2.0625C15.4358 2.0625 19.249 5.87598 19.249 10.6562C19.249 15.4365 15.3918 19.25 10.6557 19.25Z" fill="black"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="row gy-5 gx-5 row-cols-lg-3">
+          <div>
+            <div class="d-flex flex-nowrap border-bottom pb-1 mb-5 align-items-center">
+              <h5 class="mb-0">Contenus sponsorisés</h5>
+              <span class="badge badge-notif bg-black fs-xs fw-semibold flex-shrink-0 ms-2">4</span>
+            </div>
+
+            <div class="d-flex flex-column gap-5">
+              {% for i in range(0, 12) -%}
+              <div class="position-relative">
+                <div class="text-muted lh-sm d-flex flex-wrap gap-2 mb-2">
+                  <div>
+                    02.04.2022
+                  </div>
+                  <div>|</div>
+                  <div>
+                    Fri-Son
+                  </div>
+                </div>
+                <div>
+                  <a href="#" class="fs-lg stretched-link text-reset text-primary-hover text-decoration-none">
+                    Record Culture Fest with Ablette Records and Varia Instrument Fest with Ablette Records and Varia Instruments
+                    <div class="d-block">
+                      <svg class="svg-icon" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.9916 9.4648L12.2021 17.0266C12.067 17.177 11.846 17.25 11.6987 17.25C11.5356 17.25 11.3718 17.1909 11.242 17.0714C10.9648 16.8163 10.9442 16.3814 11.1962 16.1009L16.9535 9.68822H1.51196C1.13663 9.68822 0.833008 9.38081 0.833008 9.03945C0.833008 8.6981 1.13672 8.31335 1.51196 8.31335H16.9531L11.1949 1.89872C10.9429 1.61812 10.9635 1.18293 11.2407 0.928153C11.5185 0.674403 11.9474 0.693179 12.2004 0.975156L18.9899 8.53694C19.2249 8.79885 19.2249 9.20272 18.9916 9.4648Z" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              {%- endfor %}
+            </div>
+          </div>
+          <div>
+            <div class="d-flex flex-nowrap border-bottom pb-1 mb-5 align-items-center">
+              <h5 class="mb-0">Lieux culturels</h5>
+              <span class="badge badge-notif bg-black fs-xs fw-semibold flex-shrink-0 ms-2">4</span>
+            </div>
+            <div class="d-flex flex-column gap-5">
+              {% for i in range(0, 4) -%}
+              <div class="position-relative">
+                <div class="text-muted lh-sm d-flex flex-wrap gap-2 mb-2">
+                  <div>
+                    Bulle
+                  </div>
+                </div>
+                <div>
+                  <a href="#" class="fs-lg stretched-link text-reset text-primary-hover text-decoration-none">
+                    Ebullition
+                    <div class="d-inline-block">
+                      <svg class="svg-icon" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.9916 9.4648L12.2021 17.0266C12.067 17.177 11.846 17.25 11.6987 17.25C11.5356 17.25 11.3718 17.1909 11.242 17.0714C10.9648 16.8163 10.9442 16.3814 11.1962 16.1009L16.9535 9.68822H1.51196C1.13663 9.68822 0.833008 9.38081 0.833008 9.03945C0.833008 8.6981 1.13672 8.31335 1.51196 8.31335H16.9531L11.1949 1.89872C10.9429 1.61812 10.9635 1.18293 11.2407 0.928153C11.5185 0.674403 11.9474 0.693179 12.2004 0.975156L18.9899 8.53694C19.2249 8.79885 19.2249 9.20272 18.9916 9.4648Z" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              {%- endfor %}
+            </div>
+          </div>
+          <div>
+            <div class="d-flex flex-nowrap border-bottom pb-1 mb-5 align-items-center">
+              <h5 class="mb-0">Contenus sponsorisés</h5>
+              <span class="badge badge-notif bg-black fs-xs fw-semibold flex-shrink-0 ms-2">4</span>
+            </div>
+            <div class="d-flex flex-column gap-5">
+              {% for i in range(0, 3) -%}
+              <div class="position-relative">
+                <div class="text-muted lh-sm d-flex flex-wrap gap-2 mb-2">
+                  <div>
+                    02.04.2022
+                  </div>
+                  <div>|</div>
+                  <div>
+                    Fri-Son
+                  </div>
+                </div>
+                <div>
+                  <a href="#" class="fs-lg stretched-link text-reset text-primary-hover text-decoration-none">
+                    Record Culture Fest with Ablette Records and Varia Instrument Fest with Ablette Records and Varia Instruments
+                    <div class="d-block">
+                      <svg class="svg-icon" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.9916 9.4648L12.2021 17.0266C12.067 17.177 11.846 17.25 11.6987 17.25C11.5356 17.25 11.3718 17.1909 11.242 17.0714C10.9648 16.8163 10.9442 16.3814 11.1962 16.1009L16.9535 9.68822H1.51196C1.13663 9.68822 0.833008 9.38081 0.833008 9.03945C0.833008 8.6981 1.13672 8.31335 1.51196 8.31335H16.9531L11.1949 1.89872C10.9429 1.61812 10.9635 1.18293 11.2407 0.928153C11.5185 0.674403 11.9474 0.693179 12.2004 0.975156L18.9899 8.53694C19.2249 8.79885 19.2249 9.20272 18.9916 9.4648Z" />
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              {%- endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

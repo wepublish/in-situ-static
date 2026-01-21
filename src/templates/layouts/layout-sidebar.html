@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% block classBody %}layout-sidebar{% endblock %}
+{% block body %}
+    <div id="app">
+        {% include 'elements/header.html' %}
+        {% include 'elements/offcanvas-mobile.html' %}
+        <div class="app-wrapper flex-column flex-row-fluid">
+            <div class="app-sidebar flex-column">
+                <div class="app-sidebar-menu hover-scroll-overlay-y p-4">
+                    <ul class="nav nav-main flex-column">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link px-0 active" aria-current="page">
+                                agenda
+                            </a>
+                        </li>
+                        <li>
+                            <a href="map.html" class="nav-link px-0">
+                                index
+                            </a>
+                        </li>
+                        <li>
+                            <a href="info.html" class="nav-link px-0">
+                                info
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-start flex-wrap gap-3 py-4">
+                        <!--
+                        <span  data-bs-toggle="modal" data-bs-target="#searchModal">
+                            <a href="#" class="btn btn-lg btn-outline-primary btn-minimal" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Rechercher sur le site">
+                                <svg width="27" class="svg-icon" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M26.5875 25.9113L19.2181 18.5415C20.843 16.6457 21.7857 14.1925 21.7857 11.4998C21.7857 5.51546 16.9354 0.666504 10.9529 0.666504C4.9704 0.666504 0.166992 5.51702 0.166992 11.4998C0.166992 17.4827 5.01675 22.3332 10.9529 22.3332C13.6444 22.3332 16.1011 21.3457 17.9942 19.7212L25.3636 27.091C25.5719 27.2498 25.7855 27.3332 25.999 27.3332C26.2125 27.3332 26.4254 27.2518 26.588 27.089C26.9156 26.7655 26.9156 26.2342 26.5875 25.9113ZM10.9998 20.6665C5.90108 20.6665 1.83358 16.5519 1.83358 11.4998C1.83358 6.44775 5.90108 2.33317 10.9998 2.33317C16.0985 2.33317 20.166 6.40088 20.166 11.4998C20.166 16.5988 16.0516 20.6665 10.9998 20.6665Z" />
+                                </svg>
+                            </a>
+                        </span>
+                        -->
+                        <a href="#" class="btn btn-lg btn-outline-primary btn-minimal" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Proposer un contenu">
+                            <svg width="27" class="svg-icon" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M26.167 13.6659C26.167 14.2159 25.717 14.6659 25.167 14.6659H14.167V25.6659C14.167 26.2186 13.7197 26.6665 13.167 26.6665C12.6142 26.6665 12.167 26.2159 12.167 25.6659V14.6659H1.16699C0.614242 14.6659 0.166992 14.219 0.166992 13.6665C0.166992 13.1159 0.614492 12.6659 1.16699 12.6659H12.167V1.66588C12.167 1.11313 12.6142 0.666504 13.167 0.666504C13.7197 0.666504 14.167 1.11338 14.167 1.66588V12.6659H25.167C25.717 12.6659 26.167 13.1159 26.167 13.6659Z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <ul class="nav nav-main gap-x-3">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link px-0 active" aria-current="page">
+                                fr
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0">
+                                de
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-main-sm flex-column mt-3">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link px-0 py-2 active" aria-current="page">
+                                s’abonner à<br>la newsletter
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-main-sm flex-column mt-3">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link px-0 py-2 active" aria-current="page">
+                                instagram<i class="fa-regular fa-arrow-up-right-from-square fa-xs ms-1"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 py-2">
+                                twitter<i class="fa-regular fa-arrow-up-right-from-square fa-xs ms-1"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link px-0 py-2">
+                                facebook<i class="fa-regular fa-arrow-up-right-from-square fa-xs ms-1"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="app-sidebar-footer d-flex flex-stack p-4 pb-6 align-items-center justify-content-center">
+                    <a href="#" class="user-select-none">
+                        <img src="{% static 'img/logo-insitu-beta.svg' %}" alt="Logo in situ">
+                    </a>
+                </div>
+            </div>
+            <main role="main" class="app-main">
+                    {% block content %}{% endblock %}
+            </main>
+        </div>
+    </div>
+    {% include 'modules/search-modal.html' %}
+{% endblock %}

@@ -1,0 +1,53 @@
+
+
+
+.btn-close {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding:.5rem;
+  //background: transparent escape-svg($btn-close-bg) center / $btn-close-icon-width auto no-repeat;
+  @include transition($btn-transition);
+  @include border-radius(50%, 0);
+
+  &:hover {
+    color: $btn-close-hover-color;
+    background:$btn-close-hover-bg;
+  }
+
+  &:focus {
+    color: $btn-close-hover-color;
+    background:$btn-close-hover-bg;
+  }
+
+  svg {
+    width:$btn-close-icon-width;
+    height:$btn-close-icon-height;
+  }
+}
+
+.btn-close-light {
+  &:hover {
+    color: $btn-close-light-hover-color;
+    background:$btn-close-light-hover-bg;
+  }
+
+  &:focus {
+    color: $btn-close-light-hover-color;
+    background:$btn-close-light-hover-bg;
+  }
+}
+
+
+.btn-close-dark {
+  &:hover {
+    color: $btn-close-dark-hover-color;
+    background:$btn-close-dark-hover-bg;
+  }
+
+  &:focus {
+    color: $btn-close-dark-hover-color;
+    background:$btn-close-dark-hover-bg;
+  }
+}

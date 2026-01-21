@@ -1,0 +1,277 @@
+{% extends 'layout-sidebar.html' %}
+
+{% block content %}
+<div class="pt-4 pb-lg-25" id="layoutSelector" data-origin="index">
+
+    <div id="layoutSelectorList">
+        <div class="container-fluid">
+            <div class="pt-10 pb-5">
+                <div class="section-headline">
+                    <h1 class="section-title">index</h1>
+                    <p class="section-subtitle">
+                        des organismes culturels dans le canton de fribourg
+                    </p>
+                </div>
+            </div>
+            <div class="mb-5">
+                <div class="row special-row">
+                    <div class="col-12 col-sm-8 col-md-6 col-lg-6 col-xl-4 position-relative">
+                        <input type="text" id="custom-search-input" class="form-control form-control-search rounded-pill" placeholder="rechercher">
+                        <img id="search-input-img" src="{% static 'img/input-search.svg' %}" alt="Rechercher" width="20" height="20">
+                        <button id="clear-search-input">
+                            <img src="{% static 'img/input-cross.svg' %}" alt="Effacer" width="15" height="15">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include 'sections/section-scenes-list.html' %}
+    </div>
+    <div class="modal fade map-results-container" id="mapResultsModal" tabindex="-1"
+         aria-labelledby="mapResultsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-body ">
+                    <div class="d-flex flex-column gap-5">
+                        <div class="text-center close-wrapper close-wrapper-top">
+                            <a href="#" class="btn btn-black px-4 py-0 d-inline-flex align-items-center"
+                               data-bs-dismiss="modal" aria-label="Close">
+                                fermer
+                                <svg class="ms-2" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.4176 13.9167C14.1365 14.1978 13.6764 14.1978 13.3952 13.9167L7.7718 8.29327L2.14841 13.9167C1.86583 14.1992 1.40823 14.1996 1.12565 13.917C0.843079 13.6344 0.844804 13.1754 1.12597 12.8942L6.74937 7.27083L1.12597 1.64744C0.843398 1.36486 0.843206 0.90777 1.12565 0.625322C1.40714 0.343833 1.86596 0.342555 2.14841 0.625003L7.7718 6.2484L13.3952 0.625002C13.6778 0.342427 14.1347 0.342746 14.4173 0.625322C14.6999 0.907897 14.7001 1.36499 14.4176 1.64744L8.79424 7.27083L14.4176 12.8942C14.6988 13.1754 14.6988 13.6355 14.4176 13.9167Z"
+                                          fill="white"/>
+                                </svg>
+                            </a>
+                        </div>
+                        {% for i in range(0, 28) -%}
+                        <div class="list-item-link-wrapper list-item-link-wrapper-boxed">
+                            <div class="border-bottom border-current-color pb-2 mb-1 d-flex flex-nowrap align-items-center">
+                                <span class="badge badge-time bg-black fw-normal fs-6 py-1 px-2 flex-shrink-0">Lu 2</span>
+                                <a href="events-reader.html"
+                                   class="text-reset events-list-info-wrapper ms-4 flex-grow-1">
+                                    <div class="events-list-info-scroll">
+                                        <div class="fs-sm lh-sm d-flex flex-nowrap flex-grow-1 gap-2">
+                                            <div class="text-nowrap">
+                                                Théâtre de la Prillaz
+                                            </div>
+                                            <div class="separator border-start border-current-color"></div>
+                                            <div class="text-nowrap">
+                                                Estavayer-le-Lac
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <h5 class="event-title mb-2">
+                                <a href="events-reader.html" class="stretched-link text-reset text-decoration-none">Record
+                                    Culture
+                                    Fest with Ablette
+                                    Records and Varia Instruments
+                                </a>
+                            </h5>
+                            <div class="d-flex align-items-start flex-wrap gap-2">
+                                <span class="badge badge-event"
+                                      style="color:#6CFFC1;"><span>arts scéniques</span></span>
+                                <span class="badge badge-event"
+                                      style="color:#FF00FF;"><span>arts scéniques</span></span>
+                                <span class="badge badge-event"
+                                      style="color:#FFB84D;"><span>arts scéniques</span></span>
+                                <span class="badge badge-event"
+                                      style="color:#FF0000;"><span>arts scéniques</span></span>
+                                <span class="badge badge-event badge-event-empty" style="color:#FF0000;"><span>arts scéniques</span></span>
+                            </div>
+                        </div>
+                        {%- endfor %}
+                        <div class="text-center close-wrapper close-wrapper-bottom">
+                            <a href="#" class="btn btn-black px-4 py-0 d-inline-flex align-items-center"
+                               data-bs-dismiss="modal" aria-label="Close">
+                                fermer
+                                <svg class="ms-2" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.4176 13.9167C14.1365 14.1978 13.6764 14.1978 13.3952 13.9167L7.7718 8.29327L2.14841 13.9167C1.86583 14.1992 1.40823 14.1996 1.12565 13.917C0.843079 13.6344 0.844804 13.1754 1.12597 12.8942L6.74937 7.27083L1.12597 1.64744C0.843398 1.36486 0.843206 0.90777 1.12565 0.625322C1.40714 0.343833 1.86596 0.342555 2.14841 0.625003L7.7718 6.2484L13.3952 0.625002C13.6778 0.342427 14.1347 0.342746 14.4173 0.625322C14.6999 0.907897 14.7001 1.36499 14.4176 1.64744L8.79424 7.27083L14.4176 12.8942C14.6988 13.1754 14.6988 13.6355 14.4176 13.9167Z"
+                                          fill="white"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div id="layoutSelectorMap">
+
+
+        <div class="map-container">
+
+            <div class="location-dot" style="position:absolute; top:40%; left:50%;">
+                <div class="location-dot-inner">
+                    <div style="background-color:#01646A;"></div>
+                    <div style="background-color:#FFDF00;"></div>
+                    <div style="background-color:#FFAAFF;"></div>
+                </div>
+            </div>
+
+            <div class="location-dot location-cluster animated" style="position:absolute; top:40%; left:65%;">
+                <span class="number">5</span>
+                <div class="location-dot-inner">
+                    <div style="background-color:#FF4D00;"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="location-dot location-cluster animated active" style="position:absolute; top:40%; left:75%;">
+                <span class="number">
+                    <svg class="svg-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.2503 11.2497C11.0202 11.4798 10.6438 11.4798 10.4137 11.2497L5.81276 6.64877L1.2118 11.2497C0.980605 11.4809 0.606201 11.4812 0.375003 11.25C0.143804 11.0188 0.145216 10.6432 0.375265 10.4132L4.97622 5.81223L0.375264 1.21127C0.144065 0.980076 0.143909 0.606091 0.375002 0.374998C0.605312 0.144688 0.980708 0.143642 1.2118 0.374736L5.81276 4.9757L10.4137 0.374736C10.6449 0.143538 11.0188 0.143799 11.25 0.374997C11.4812 0.606196 11.4814 0.98018 11.2503 1.21127L6.6493 5.81223L11.2503 10.4132C11.4803 10.6432 11.4803 11.0197 11.2503 11.2497Z" />
+                    </svg>
+                </span>
+                <div class="location-dot-inner">
+                    <div style="background-color:#FF4D00;"></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+            </div>
+            <div class="location-dot animated" style="position:absolute; top:50%; left:50%;">
+                <div class="location-dot-inner">
+                    <div style="background-color:#01646A;"></div>
+                    <div style="background-color:#FFDF00;"></div>
+                    <div style="background-color:#FFAAFF;"></div>
+                </div>
+            </div>
+            <div class="location-dot animated active"
+                 style="position:absolute; top:60%; left:50%;"
+                 data-bs-toggle="modal" data-bs-target="#mapResultsModal">
+                <div class="location-dot-inner">
+                    <div style="background-color:#01646A;"></div>
+                    <div style="background-color:#FFDF00;"></div>
+                    <div style="background-color:#FFAAFF;"></div>
+                </div>
+            </div>
+
+
+            <div class="location-dot-group location-dot-group-2" style="position:absolute; top:50%; left:65%;">
+                <div class="location-dot animated active">
+                    <div class="location-dot-inner">
+                        <div style="background-color:#93B27F;"></div>
+                        <div style="background-color:#FFAAFF;"></div>
+                        <div style="background-color:#FFDF00;"></div>
+                    </div>
+                </div>
+                <div class="location-dot animated active">
+                    <div class="location-dot-inner">
+                        <div style="background-color:#1983FF;"></div>
+                        <div style="background-color:#FFDF00;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="location-dot-group location-dot-group-3" style="position:absolute; top:60%; left:65%;">
+                <div class="location-dot animated active">
+                    <div class="location-dot-inner">
+                        <div style="background-color:#FFAAFF;"></div>
+                        <div style="background-color:#FF4D00;"></div>
+                        <div style="background-color:#93B27F;"></div>
+                    </div>
+                </div>
+                <div class="location-dot animated active">
+                    <div class="location-dot-inner">
+                        <div style="background-color:#1983FF;"></div>
+                        <div style="background-color:#863D15;"></div>
+                    </div>
+                </div>
+                <div class="location-dot animated active">
+                    <div class="location-dot-inner">
+                        <div style="background-color:#75FB70;"></div>
+                        <div style="background-color:#FFDF00;"></div>
+                        <div style="background-color:#FFAAFF;"></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="map-ui">
+                <div class="d-flex flex-lg-column flex-nowrap gap-4">
+                    <button class="btn btn-lg btn-white btn-circle" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Zoom avant">
+                        <svg class="svg-icon" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M28.458 14.6458C28.458 15.2302 27.9799 15.7083 27.3955 15.7083H15.708V27.3958C15.708 27.9831 15.2328 28.459 14.6455 28.459C14.0582 28.459 13.583 27.9802 13.583 27.3958V15.7083H1.89551C1.30821 15.7083 0.833008 15.2335 0.833008 14.6465C0.833008 14.0614 1.30848 13.5833 1.89551 13.5833H13.583V1.89582C13.583 1.30852 14.0582 0.833984 14.6455 0.833984C15.2328 0.833984 15.708 1.30879 15.708 1.89582V13.5833H27.3955C27.9799 13.5833 28.458 14.0614 28.458 14.6458Z" fill="black"/>
+                        </svg>
+                    </button>
+                    <button class="btn btn-lg btn-white btn-circle" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Zoom arrière">
+                        <svg class="svg-icon" width="29" height="4" viewBox="0 0 29 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M28.458 2C28.458 2.58438 27.9799 3.0625 27.3955 3.0625H1.89551C1.30821 3.0625 0.833008 2.5877 0.833008 2.00066C0.833008 1.41563 1.30848 0.9375 1.89551 0.9375H27.3955C27.9799 0.9375 28.458 1.41562 28.458 2Z" fill="black"/>
+                        </svg>
+                    </button>
+                    <button class="btn btn-lg btn-white btn-circle" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Sauver la position pour l’itinéraire">
+                        <svg class="svg-icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.9374 8.05078L19.0254 4.96231C19.3886 4.59609 19.9863 4.59609 20.3496 4.96231C20.7187 5.32793 20.7187 5.92383 20.3496 6.28711L15.6621 10.9746C15.2988 11.3438 14.7011 11.3438 14.3378 10.9746L9.65031 6.28711C9.28117 5.92383 9.28117 5.32793 9.65031 4.96231C10.0136 4.59609 10.6113 4.59609 10.9745 4.96231L14.0624 8.05078V0.9375C14.0624 0.419766 14.4843 0 14.9999 0C15.5156 0 15.9374 0.419766 15.9374 0.9375V8.05078ZM16.875 15C16.875 16.0371 16.0371 16.875 14.9999 16.875C13.9628 16.875 13.1249 16.0371 13.1249 15C13.1249 13.9629 13.9628 13.125 14.9999 13.125C16.0371 13.125 16.875 13.9629 16.875 15ZM19.0254 25.0371L15.9374 21.9492V29.0625C15.9374 29.5781 15.5156 30 14.9999 30C14.4843 30 14.0624 29.5781 14.0624 29.0625V21.9492L10.9745 25.0371C10.6113 25.4062 10.0136 25.4062 9.65031 25.0371C9.28117 24.6738 9.28117 24.0762 9.65031 23.7129L14.3378 19.0254C14.7011 18.6562 15.2988 18.6562 15.6621 19.0254L20.3496 23.7129C20.7187 24.0762 20.7187 24.6738 20.3496 25.0371C19.9863 25.4062 19.3886 25.4062 19.0254 25.0371ZM4.96221 9.65039C5.32842 9.28125 5.92374 9.28125 6.28702 9.65039L10.9745 14.3379C11.3437 14.7012 11.3437 15.2988 10.9745 15.6621L6.28702 20.3496C5.92374 20.7188 5.32842 20.7188 4.96221 20.3496C4.596 19.9863 4.596 19.3887 4.96221 19.0254L8.0507 15.8848H0.937392C0.419714 15.8848 0 15.5156 0 14.9473C0 14.4844 0.419714 14.0098 0.937392 14.0098H8.0507L4.96221 10.9746C4.596 10.6113 4.596 10.0137 4.96221 9.65039ZM25.0371 10.9746L21.9492 14.0098H29.0625C29.5781 14.0098 30 14.4844 30 14.9473C30 15.5156 29.5781 15.8848 29.0625 15.8848H21.9492L25.0371 19.0254C25.4062 19.3887 25.4062 19.9863 25.0371 20.3496C24.6738 20.7188 24.0762 20.7188 23.7129 20.3496L19.0254 15.6621C18.6562 15.2988 18.6562 14.7012 19.0254 14.3379L23.7129 9.65039C24.0762 9.28125 24.6738 9.28125 25.0371 9.65039C25.4062 10.0137 25.4062 10.6113 25.0371 10.9746Z" fill="black"/>
+                        </svg>
+
+                    </button>
+                </div>
+            </div>
+
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21848.44203908469!2d7.142302585847136!3d46.803217464920415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e6ecd8d5a7d2f%3A0xbbe5d1f6b937c32e!2sFribourg!5e0!3m2!1sfr!2sch!4v1662966381196!5m2!1sfr!2sch"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+
+    <div class="layout-selector-links-wrapper">
+        <div class="container-fluid d-flex justify-content-center pt-5">
+            <div class="bg-white shadow rounded-pill d-flex p-2">
+                <a href="#" class="layout-selector-link" data-layout="list">
+                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 3C0 2.44772 0.447715 2 1 2H19C19.5523 2 20 2.44772 20 3C20 3.55228 19.5523 4 19 4H1C0.447715 4 0 3.55228 0 3Z" fill="black" style="fill:black;fill-opacity:1;"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 9C0 8.44772 0.447715 8 1 8H19C19.5523 8 20 8.44772 20 9C20 9.55228 19.5523 10 19 10H1C0.447715 10 0 9.55228 0 9Z" fill="black" style="fill:black;fill-opacity:1;"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 15C0 14.4477 0.447715 14 1 14H19C19.5523 14 20 14.4477 20 15C20 15.5523 19.5523 16 19 16H1C0.447715 16 0 15.5523 0 15Z" fill="black" style="fill:black;fill-opacity:1;"/>
+                    </svg>
+
+                    <div>
+                        liste
+                    </div>
+
+                </a>
+                <a href="#" class="layout-selector-link" data-layout="mixed">
+                    <svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M0 2C0 1.44772 0.447715 1 1 1H9C9.55229 1 10 1.44772 10 2C10 2.55228 9.55229 3 9 3H1C0.447715 3 0 2.55228 0 2Z"
+                              fill="black"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M0 9C0 8.44772 0.447715 8 1 8H9C9.55229 8 10 8.44772 10 9C10 9.55228 9.55229 10 9 10H1C0.447715 10 0 9.55228 0 9Z"
+                              fill="black"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M0 16C0 15.4477 0.447715 15 1 15H9C9.55229 15 10 15.4477 10 16C10 16.5523 9.55229 17 9 17H1C0.447715 17 0 16.5523 0 16Z"
+                              fill="black"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M21 2H15L15 16H21V2ZM15 0C13.8954 0 13 0.89543 13 2V16C13 17.1046 13.8954 18 15 18H21C22.1046 18 23 17.1046 23 16V2C23 0.895431 22.1046 0 21 0H15Z"
+                              fill="black"/>
+                    </svg>
+                    <div>
+                        mixte
+                    </div>
+                </a>
+                <a href="#" class="layout-selector-link" data-layout="map">
+                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0002 0.50009C19.7944 -0.11671 20.0002 0.728212 20.0002 2.50009L20 14.5001C20 15.6815 19.7923 15.8446 18 16.5001L14 18.0001C14 18.0001 13.3905 18.2001 13 18.2001C12.6095 18.2001 12 18.0001 12 18.0001L8 16.5001C8 16.5001 7.39826 16.3001 7 16.3001C6.60174 16.3001 6 16.5001 6 16.5001L2 18.0001C0.380952 18.5669 0 17.49 0 16.0001L0.000185534 4.00009C0.000185534 2.89552 0.145701 2.67362 2.00019 2.00009L6.00019 0.50009C6.00019 0.50009 6.56344 0.300213 7 0.300148C7.43656 0.300084 8.00019 0.50009 8.00019 0.50009L12.0002 2.00009C12.0002 2.00009 12.6095 2.2001 13 2.2001C13.3905 2.2001 14.0002 2.00009 14.0002 2.00009L18.0002 0.50009ZM2 16.0001L6 14.5001L6.00019 2.50009L2.00019 4.00009L2 16.0001ZM14 16.0001L18 14.5001L18.0002 2.50009L14.0002 4.00009L14 16.0001ZM8 14.5001L12 16.0001L12.0002 4.00009L8.00019 2.50009L8 14.5001Z" fill="black" style="fill:black;fill-opacity:1;"/>
+                    </svg>
+                    <div>
+                        carte
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

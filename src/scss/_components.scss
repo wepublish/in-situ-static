@@ -1,0 +1,99 @@
+.svg-icon {
+  fill:currentColor;
+  transition:fill .15s ease-in-out;
+}
+
+.is-headline {
+  position:relative;
+  aspect-ratio: 1.85 / 1;
+  width:57.875rem;
+  max-width:100%;
+  img {
+    position:absolute;
+    z-index:-1;
+    object-fit:contain
+  }
+}
+
+.widget-filter-selector {
+  //
+  background-color:$white;
+  /*
+  &:before {
+    content:"";
+    position:absolute;
+    height:100%;
+    width:calc(100% + 3rem);
+    left:-1.5rem;
+    right:-1.5rem;
+    top:0;
+    background:$white;
+    z-index:-1;
+  }*/
+}
+
+.search-input-wrapper {
+  max-width:490px;
+}
+
+.list-item-link-wrapper {
+  position:relative;
+  z-index:2;
+  color:$black;
+  &:before {
+    opacity:0;
+    content:"";
+    display:block;
+    height:calc(100% + (#{$eventslist-item-hover-bg-padding} * 2));
+    width:calc(100% + (#{$eventslist-item-hover-bg-padding} * 2));
+    background:$eventslist-item-hover-bg;
+    top:-$eventslist-item-hover-bg-padding;
+    left:-$eventslist-item-hover-bg-padding;
+    position:absolute;
+    z-index:-1;
+    border-radius:$eventslist-item-hover-bg-border-radius;
+    transition:$eventslist-item-hover-bg-transition;
+  }
+  &:hover:before, &.active:before {
+    opacity:1;
+  }
+}
+
+.list-item-link-wrapper-boxed {
+  background:$white;
+  padding:1rem;
+  border-radius:$eventslist-item-hover-bg-border-radius;
+  box-shadow:$box-shadow-sm;
+
+  &:before {
+    top:.35rem;
+    left:.35rem;
+    height:calc(100% - .7rem);
+    width:calc(100% - .7rem);
+  }
+}
+
+.reader-time-location-wrapper {
+  @include media-breakpoint-up(xl) {
+    border-bottom:1px solid $border-color;
+  }
+  .separator {
+    @include media-breakpoint-down(xl) {
+      border-top:1px solid $border-color;
+    }
+    @include media-breakpoint-up(xl) {
+      border-left:1px solid $border-color;
+    }
+  }
+}
+
+.reader-icon-list {
+  img {
+    width:var(--reader-icon-width);
+  }
+
+  width: calc((var(--reader-icon-width) * var(--reader-icon-list-items-by-line)) + ((var(--reader-icon-list-items-by-line) - 1) * var(--reader-icon-list-gap)));
+  max-width:100%;
+}
+
+

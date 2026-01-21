@@ -1,0 +1,48 @@
+.layout-images {
+    .masonry-sizer,
+    .masonry-item {
+        width: 25%;
+        
+        @include media-breakpoint-down(xxl) {
+            width: 33.3333%;
+        }
+        
+        @include media-breakpoint-down(xl) {
+            width: 50%;
+        }
+        
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+    }
+}
+
+.layout-list {
+    .masonry-sizer,
+    .masonry-item {
+        width: 25%;
+        
+        @include media-breakpoint-down(xxl) {
+            width: 33.3333%;
+        }
+        
+        @include media-breakpoint-down(xl) {
+            width: 50%;
+        }
+        
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+    }
+}
+
+.layout-mixed {
+    .masonry-sizer,
+    .masonry-item {
+        width: 100%;
+    }
+}
+
+.masonry-item {
+    padding: 1rem;
+}

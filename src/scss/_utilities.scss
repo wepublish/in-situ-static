@@ -1,0 +1,47 @@
+// Utilities
+.hover-scroll-overlay-y {
+  overflow-y: hidden;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    width: .5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: lightgrey;
+    outline: none;
+  }
+
+  &:hover {
+    overflow-y: overlay;
+  }
+}
+
+
+.min-w-auto {
+  min-width:auto;
+}
+
+
+.element-front {
+  z-index:$zindex-front;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+input::placeholder,
+.choices__placeholder,
+input[type=date]:invalid::-webkit-datetime-edit,
+input[type=date].placeholder-state::-webkit-datetime-edit {
+    color: #888888;
+}
+
+legend.col-form-label {
+    font-weight: bold;
+}

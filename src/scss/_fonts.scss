@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'BretagneSelfModern';
+  src: url('../assets/fonts/bretagne_self-modern_regular_web.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/bretagne_self-modern_regular_web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../assets/fonts/bretagne_self-modern_regular_web.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../assets/fonts/bretagne_self-modern_regular_web.woff') format('woff'), /* Pretty Modern Browsers */
+  url('../assets/fonts/bretagne_self-modern_regular_web.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight:400;
+
+}
+
+@font-face {
+  font-family: 'BretagneSelfModern';
+  src: url('../assets/fonts/bretagne_self_modern_italic_web.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/bretagne_self_modern_italic_web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../assets/fonts/bretagne_self_modern_italic_web.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../assets/fonts/bretagne_self_modern_italic_web.woff') format('woff'), /* Pretty Modern Browsers */
+  url('../assets/fonts/bretagne_self_modern_italic_web.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight:400;
+  font-style:italic;
+
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('../assets/fonts/SuisseIntl-Regular-WebM.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/SuisseIntl-Regular-WebM.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../assets/fonts/SuisseIntl-Regular-WebM.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../assets/fonts/SuisseIntl-Regular-WebM.woff') format('woff'), /* Pretty Modern Browsers */
+  url('../assets/fonts/SuisseIntl-Regular-WebM.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight:400;
+
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('../assets/fonts/SuisseIntl-RegularItalic-WebM.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/SuisseIntl-RegularItalic-WebM.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../assets/fonts/SuisseIntl-RegularItalic-WebM.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../assets/fonts/SuisseIntl-RegularItalic-WebM.woff') format('woff'), /* Pretty Modern Browsers */
+  url('../assets/fonts/SuisseIntl-RegularItalic-WebM.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight:400;
+  font-style:italic;
+
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('../assets/fonts/SuisseIntl-SemiBold-WebM.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/SuisseIntl-SemiBold-WebM.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../assets/fonts/SuisseIntl-SemiBold-WebM.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../assets/fonts/SuisseIntl-SemiBold-WebM.woff') format('woff'), /* Pretty Modern Browsers */
+  url('../assets/fonts/SuisseIntl-SemiBold-WebM.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight:600;
+
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: url('../assets/fonts/SuisseIntl-SemiBoldItalic-WebM.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/SuisseIntl-SemiBoldItalic-WebM.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../assets/fonts/SuisseIntl-SemiBoldItalic-WebM.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../assets/fonts/SuisseIntl-SemiBoldItalic-WebM.woff') format('woff'), /* Pretty Modern Browsers */
+  url('../assets/fonts/SuisseIntl-SemiBoldItalic-WebM.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-weight:600;
+  font-style:italic;
+
+}
+
+.font-18px {
+  font-size: 18px;
+}

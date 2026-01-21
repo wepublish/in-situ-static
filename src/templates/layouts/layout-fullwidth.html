@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block classBody %}layout-fullwidth{% endblock %}
+{% block body %}
+<div id="app">
+    {% include 'elements/admin/header.html' %}
+    <main role="main">
+        {% block content %}{% endblock %}
+    </main>
+    {% include 'elements/admin/footer.html' %}
+</div>
+
+{% endblock %}

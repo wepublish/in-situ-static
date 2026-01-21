@@ -1,0 +1,238 @@
+{% extends 'layout-sidebar.html' %}
+
+{% block content %}
+<div class="pt-4 pb-lg-25" id="layoutSelector" data-origin="agenda">
+    {% include 'modules/filters.html' %}
+
+    <div id="layoutSelectorList">
+
+        <div class="container-fluid">
+            <div class="pt-10 pb-5">
+                <div class="section-headline">
+                    <h1 class="section-title">agenda</h1>
+                    <p class="section-subtitle">
+                        des événements culturels dans le canton de fribourg
+                    </p>
+                </div>
+            </div>
+            <div class="mb-5">
+                <div class="row special-row">
+                    <div class="col-12 col-sm-8 col-md-6 col-lg-6 col-xl-4 position-relative">
+                        <input type="text" id="custom-search-input" class="form-control form-control-search rounded-pill" placeholder="rechercher">
+                        <img id="search-input-img" src="{% static 'img/input-search.svg' %}" alt="Rechercher" width="20" height="20">
+                        <button id="clear-search-input">
+                            <img src="{% static 'img/input-cross.svg' %}" alt="Effacer" width="15" height="15">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="py-5 overflow-x-hidden mb-5 d-xxl-none">
+            <div class="filter-horizontal-wrapper">
+                <div class="d-flex">
+                    <div class="d-flex align-items-start flex-nowrap flex-lg-wrap gap-2 px-6">
+                        <button class="btn btn-filter-toggler btn-outline-primary bs-dashed bs-solid-active bs-solid-focus d-inline-flex align-items-center flex-shrink-0 active">
+                            ce soir
+                            <svg class="svg-icon ms-2" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.917 8.79111C16.917 9.13486 16.6357 9.41611 16.292 9.41611H9.41699V16.2911C9.41699 16.6366 9.13746 16.9165 8.79199 16.9165C8.44652 16.9165 8.16699 16.6349 8.16699 16.2911V9.41611H1.29199C0.946523 9.41611 0.666992 9.13682 0.666992 8.7915C0.666992 8.44736 0.94668 8.16611 1.29199 8.16611H8.16699V1.29111C8.16699 0.945645 8.44652 0.666504 8.79199 0.666504C9.13746 0.666504 9.41699 0.945801 9.41699 1.29111V8.16611H16.292C16.6357 8.16611 16.917 8.44736 16.917 8.79111Z"/>
+                            </svg>
+                        </button>
+                        <button class="btn btn-filter-toggler btn-outline-primary bs-dashed bs-solid-active bs-solid-focus d-inline-flex align-items-center flex-shrink-0">
+                            demain
+                            <svg class="svg-icon ms-2" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.917 8.79111C16.917 9.13486 16.6357 9.41611 16.292 9.41611H9.41699V16.2911C9.41699 16.6366 9.13746 16.9165 8.79199 16.9165C8.44652 16.9165 8.16699 16.6349 8.16699 16.2911V9.41611H1.29199C0.946523 9.41611 0.666992 9.13682 0.666992 8.7915C0.666992 8.44736 0.94668 8.16611 1.29199 8.16611H8.16699V1.29111C8.16699 0.945645 8.44652 0.666504 8.79199 0.666504C9.13746 0.666504 9.41699 0.945801 9.41699 1.29111V8.16611H16.292C16.6357 8.16611 16.917 8.44736 16.917 8.79111Z"/>
+                            </svg>
+                        </button>
+                        <button class="btn btn-filter-toggler btn-outline-primary bs-dashed bs-solid-active bs-solid-focus d-inline-flex align-items-center flex-shrink-0">
+                            ce week-end
+                            <svg class="svg-icon ms-2" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.917 8.79111C16.917 9.13486 16.6357 9.41611 16.292 9.41611H9.41699V16.2911C9.41699 16.6366 9.13746 16.9165 8.79199 16.9165C8.44652 16.9165 8.16699 16.6349 8.16699 16.2911V9.41611H1.29199C0.946523 9.41611 0.666992 9.13682 0.666992 8.7915C0.666992 8.44736 0.94668 8.16611 1.29199 8.16611H8.16699V1.29111C8.16699 0.945645 8.44652 0.666504 8.79199 0.666504C9.13746 0.666504 9.41699 0.945801 9.41699 1.29111V8.16611H16.292C16.6357 8.16611 16.917 8.44736 16.917 8.79111Z"/>
+                            </svg>
+                        </button>
+                        <button class="btn btn-filter-toggler btn-outline-primary bs-dashed bs-solid-active bs-solid-focus d-inline-flex align-items-center flex-shrink-0">
+                            cette semaine
+                            <svg class="svg-icon ms-2" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.917 8.79111C16.917 9.13486 16.6357 9.41611 16.292 9.41611H9.41699V16.2911C9.41699 16.6366 9.13746 16.9165 8.79199 16.9165C8.44652 16.9165 8.16699 16.6349 8.16699 16.2911V9.41611H1.29199C0.946523 9.41611 0.666992 9.13682 0.666992 8.7915C0.666992 8.44736 0.94668 8.16611 1.29199 8.16611H8.16699V1.29111C8.16699 0.945645 8.44652 0.666504 8.79199 0.666504C9.13746 0.666504 9.41699 0.945801 9.41699 1.29111V8.16611H16.292C16.6357 8.16611 16.917 8.44736 16.917 8.79111Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        {% include 'sections/section-events-list.html' %}
+
+        <div class="container-fluid d-flex justify-content-center mt-10">
+            <button type="button" class="btn btn-white btn-outline-primary btn-show-more">
+                Afficher plus<i class="fa-regular fa-angle-down ms-2"></i>
+            </button>
+        </div>
+    </div>
+
+
+    <div class="modal fade map-results-container" id="mapResultsModal" tabindex="-1"
+         aria-labelledby="mapResultsModalLabel" aria-hidden="true">
+
+
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+
+
+                <div class="modal-body">
+                    <div class="d-flex flex-column gap-5">
+                        <div class="text-center close-wrapper close-wrapper-top">
+                            <a href="#" class="btn btn-black px-4 py-0 d-inline-flex align-items-center"
+                               data-bs-dismiss="modal" aria-label="Close">
+                                fermer
+                                <svg class="ms-2" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.4176 13.9167C14.1365 14.1978 13.6764 14.1978 13.3952 13.9167L7.7718 8.29327L2.14841 13.9167C1.86583 14.1992 1.40823 14.1996 1.12565 13.917C0.843079 13.6344 0.844804 13.1754 1.12597 12.8942L6.74937 7.27083L1.12597 1.64744C0.843398 1.36486 0.843206 0.90777 1.12565 0.625322C1.40714 0.343833 1.86596 0.342555 2.14841 0.625003L7.7718 6.2484L13.3952 0.625002C13.6778 0.342427 14.1347 0.342746 14.4173 0.625322C14.6999 0.907897 14.7001 1.36499 14.4176 1.64744L8.79424 7.27083L14.4176 12.8942C14.6988 13.1754 14.6988 13.6355 14.4176 13.9167Z"
+                                          fill="white"/>
+                                </svg>
+                            </a>
+                        </div>
+                        {% for i in range(0, 2) -%}
+                        <div class="list-item-link-wrapper list-item-link-wrapper-boxed">
+                            <div class="border-bottom border-current-color pb-2 mb-1 d-flex flex-nowrap align-items-center">
+                                <span class="badge badge-time bg-black fw-normal fs-6 py-1 px-2 flex-shrink-0">Lu 2</span>
+                                <a href="events-reader.html"
+                                   class="text-reset events-list-info-wrapper ms-4 flex-grow-1">
+                                    <div class="events-list-info-scroll">
+                                        <div class="fs-sm lh-sm d-flex flex-nowrap flex-grow-1 gap-2">
+                                            <div class="text-nowrap">
+                                                Théâtre de la Prillaz
+                                            </div>
+                                            <div class="separator border-start border-current-color"></div>
+                                            <div class="text-nowrap">
+                                                Estavayer-le-Lac
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <h5 class="event-title mb-2">
+                                <a href="events-reader.html" class="stretched-link text-reset text-decoration-none">Record
+                                    Culture
+                                    Fest with Ablette
+                                    Records and Varia Instruments
+                                </a>
+                            </h5>
+                            <div class="d-flex align-items-start flex-wrap gap-2">
+                                <span class="badge badge-event"
+                                      style="color:#6CFFC1;"><span>arts scéniques</span></span>
+                                <span class="badge badge-event"
+                                      style="color:#FF00FF;"><span>arts scéniques</span></span>
+                                <span class="badge badge-event"
+                                      style="color:#FFB84D;"><span>arts scéniques</span></span>
+                                <span class="badge badge-event"
+                                      style="color:#FF0000;"><span>arts scéniques</span></span>
+                                <span class="badge badge-event badge-event-empty" style="color:#FF0000;"><span>arts scéniques</span></span>
+                            </div>
+                        </div>
+                        {%- endfor %}
+
+                        <div class="text-center close-wrapper close-wrapper-bottom">
+                            <a href="#" class="btn btn-black px-4 py-0 d-inline-flex align-items-center"
+                               data-bs-dismiss="modal" aria-label="Close">
+                                fermer
+                                <svg class="ms-2" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.4176 13.9167C14.1365 14.1978 13.6764 14.1978 13.3952 13.9167L7.7718 8.29327L2.14841 13.9167C1.86583 14.1992 1.40823 14.1996 1.12565 13.917C0.843079 13.6344 0.844804 13.1754 1.12597 12.8942L6.74937 7.27083L1.12597 1.64744C0.843398 1.36486 0.843206 0.90777 1.12565 0.625322C1.40714 0.343833 1.86596 0.342555 2.14841 0.625003L7.7718 6.2484L13.3952 0.625002C13.6778 0.342427 14.1347 0.342746 14.4173 0.625322C14.6999 0.907897 14.7001 1.36499 14.4176 1.64744L8.79424 7.27083L14.4176 12.8942C14.6988 13.1754 14.6988 13.6355 14.4176 13.9167Z"
+                                          fill="white"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div id="layoutSelectorMap">
+
+        <div class="map-container">
+
+            <div class="location-dot" style="position:absolute; top:50%; left:50%; transform:translateX(-50%);">
+                <div class="location-dot-inner">
+                    <div style="background-color:#01646A;"></div>
+                    <div style="background-color:#FFDF00;"></div>
+                    <div style="background-color:#FFAAFF;"></div>
+                </div>
+            </div>
+            <div class="location-dot active"
+                 style="position:absolute; top:calc(50% + 4rem); left:50%; transform:translateX(-50%);"
+                 data-bs-toggle="modal" data-bs-target="#mapResultsModal">
+                <div class="location-dot-inner">
+                    <div style="background-color:#01646A;"></div>
+                    <div style="background-color:#FFDF00;"></div>
+                    <div style="background-color:#FFAAFF;"></div>
+                </div>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21848.44203908469!2d7.142302585847136!3d46.803217464920415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e6ecd8d5a7d2f%3A0xbbe5d1f6b937c32e!2sFribourg!5e0!3m2!1sfr!2sch!4v1662966381196!5m2!1sfr!2sch"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+
+    <div class="layout-selector-links-wrapper">
+        <div class="container-fluid d-flex justify-content-center pt-5">
+            <div class="bg-white shadow rounded-pill d-flex p-2">
+                <a href="#" class="layout-selector-link d-none" data-layout="list">
+                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 3C0 2.44772 0.447715 2 1 2H19C19.5523 2 20 2.44772 20 3C20 3.55228 19.5523 4 19 4H1C0.447715 4 0 3.55228 0 3Z" fill="black" style="fill:black;fill-opacity:1;"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 9C0 8.44772 0.447715 8 1 8H19C19.5523 8 20 8.44772 20 9C20 9.55228 19.5523 10 19 10H1C0.447715 10 0 9.55228 0 9Z" fill="black" style="fill:black;fill-opacity:1;"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 15C0 14.4477 0.447715 14 1 14H19C19.5523 14 20 14.4477 20 15C20 15.5523 19.5523 16 19 16H1C0.447715 16 0 15.5523 0 15Z" fill="black" style="fill:black;fill-opacity:1;"/>
+                    </svg>
+
+                    <div>
+                        liste
+                    </div>
+
+                </a>
+                <a href="#" class="layout-selector-link" data-layout="mixed">
+                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 3C0 2.44772 0.447715 2 1 2H19C19.5523 2 20 2.44772 20 3C20 3.55228 19.5523 4 19 4H1C0.447715 4 0 3.55228 0 3Z" fill="black" style="fill:black;fill-opacity:1;"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 9C0 8.44772 0.447715 8 1 8H19C19.5523 8 20 8.44772 20 9C20 9.55228 19.5523 10 19 10H1C0.447715 10 0 9.55228 0 9Z" fill="black" style="fill:black;fill-opacity:1;"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 15C0 14.4477 0.447715 14 1 14H19C19.5523 14 20 14.4477 20 15C20 15.5523 19.5523 16 19 16H1C0.447715 16 0 15.5523 0 15Z" fill="black" style="fill:black;fill-opacity:1;"/>
+                    </svg>
+
+                    <div>
+                        liste
+                    </div>
+
+                </a>
+                <a href="#" class="layout-selector-link" data-layout="images">
+                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18 2H2V16H18V2ZM2 0C0.895431 0 0 0.89543 0 2V16C0 17.1046 0.895431 18 2 18H18C19.1046 18 20 17.1046 20 16V2C20 0.895431 19.1046 0 18 0H2Z" fill="black" style="fill:black;fill-opacity:1;"/>
+                        <path d="M11.75 7.7002C11.9721 7.70026 12.1801 7.80964 12.3066 7.99512L15.6816 12.9453C15.8222 13.1506 15.8359 13.4175 15.7207 13.6396C15.6054 13.8618 15.3752 13.9999 15.125 14H5.6748C5.41605 14 5.17988 13.8506 5.06738 13.6172C4.95507 13.3839 4.98559 13.1057 5.14844 12.9033L6.94922 10.6533C7.07574 10.4931 7.2722 10.4004 7.47461 10.4004C7.67711 10.4004 7.8716 10.493 8.00098 10.6533L8.74609 11.584L11.1934 7.99512C11.3171 7.8097 11.5279 7.7002 11.75 7.7002ZM6.34961 5C6.70765 5 7.05151 5.14233 7.30469 5.39551C7.55764 5.64857 7.70009 5.9918 7.7002 6.34961C7.7002 6.7076 7.5578 7.05152 7.30469 7.30469C7.05151 7.55786 6.70765 7.7002 6.34961 7.7002C5.99173 7.70015 5.64862 7.55769 5.39551 7.30469C5.14233 7.05151 5 6.70765 5 6.34961C5.0001 5.99171 5.14243 5.64859 5.39551 5.39551C5.64863 5.14244 5.99168 5.00005 6.34961 5Z" fill="black" style="fill:black;fill-opacity:1;"/>
+                    </svg>
+                    <div>
+                        image
+                    </div>
+                </a>
+                <a href="#" class="layout-selector-link" data-layout="map">
+                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0002 0.50009C19.7944 -0.11671 20.0002 0.728212 20.0002 2.50009L20 14.5001C20 15.6815 19.7923 15.8446 18 16.5001L14 18.0001C14 18.0001 13.3905 18.2001 13 18.2001C12.6095 18.2001 12 18.0001 12 18.0001L8 16.5001C8 16.5001 7.39826 16.3001 7 16.3001C6.60174 16.3001 6 16.5001 6 16.5001L2 18.0001C0.380952 18.5669 0 17.49 0 16.0001L0.000185534 4.00009C0.000185534 2.89552 0.145701 2.67362 2.00019 2.00009L6.00019 0.50009C6.00019 0.50009 6.56344 0.300213 7 0.300148C7.43656 0.300084 8.00019 0.50009 8.00019 0.50009L12.0002 2.00009C12.0002 2.00009 12.6095 2.2001 13 2.2001C13.3905 2.2001 14.0002 2.00009 14.0002 2.00009L18.0002 0.50009ZM2 16.0001L6 14.5001L6.00019 2.50009L2.00019 4.00009L2 16.0001ZM14 16.0001L18 14.5001L18.0002 2.50009L14.0002 4.00009L14 16.0001ZM8 14.5001L12 16.0001L12.0002 4.00009L8.00019 2.50009L8 14.5001Z" fill="black" style="fill:black;fill-opacity:1;"/>
+                    </svg>
+                    <div>
+                        carte
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

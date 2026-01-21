@@ -1,0 +1,79 @@
+.section-info {
+
+
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-size:$font-size-xl;
+    font-family:$font-family-sans-serif;
+    line-height:1.375;
+    font-style: normal;
+  }
+
+  .info-general-content {
+    h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+      /*@extend %heading-sm;*/
+      font-size:1rem;//1.125rem;
+      font-weight:$font-weight-bold;
+      margin-bottom:.75rem;
+    }
+  }
+
+}
+
+.col-info-main {
+  @include media-breakpoint-up(xl) {
+    max-width: 1024px;
+
+    .col-info-main-content {
+      padding-right:10%;
+    }
+  }
+}
+
+.col-info-side {
+  @include media-breakpoint-up(xl) {
+    max-width:452px;
+  }
+}
+
+.image-info-team-container {
+  @include media-breakpoint-down(lg) {
+    margin-inline:calc((#{$grid-gutter-width} * .5) * -1);
+  }
+}
+
+.image-info-team {
+  max-height:512px;
+}
+
+.section-info-right-content {
+  top:1.5rem;
+}
+
+.partner-image-container {
+  border-radius:0.75rem;
+  position:relative;
+  background:$light;
+  padding:.125rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  aspect-ratio: 10 / 4.6;
+  transition:background-color .2s ease-in-out;
+  img {
+    max-height:100%;
+    max-width:100%;
+  }
+
+  &:hover {
+    background-color:$gray;
+  }
+}
+
+.card-info-heading {
+  margin-bottom:0.625rem;
+}
+/*
+.info-intro {
+  font-size:1.5rem;
+  line-height:1.375;
+}*/

@@ -1,0 +1,21 @@
+.section-headline {
+    .section-title {
+        font-family: 'SuisseIntl', serif;
+        font-style:normal;
+        margin-bottom: 0;
+        font-size: 44px;
+        
+        @include media-breakpoint-down(md) {
+            font-size: 34px;
+        }
+    }
+    
+    .section-subtitle {
+        font-size: 24px;
+        line-height: 1.2;
+        
+        @include media-breakpoint-down(md) {
+            font-size: 22px;
+        }
+    }
+}

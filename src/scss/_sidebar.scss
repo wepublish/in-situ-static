@@ -1,0 +1,20 @@
+.app-sidebar {
+    z-index: 105;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display:none;
+    user-select: none;
+
+
+    @include media-breakpoint-up(lg) {
+        display: flex;
+        flex-shrink: 0;
+        width: var(--is-app-sidebar-width);
+    }
+}
+
+.app-sidebar-menu {
+    height:100%;
+}

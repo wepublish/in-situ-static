@@ -1,0 +1,192 @@
+<section class="container-fluid">
+    <div class="mb-5 mb-lg-0">
+        {% for i in range(0, 2) -%}
+        <div class="eventslist-month-container" data-month="{% if i == 0 %}avril 2022{% else %}mai 2022{% endif %}" data-year="2022">
+            <div class="d-flex justify-content-between events-list-header events-list-header-border mb-3 mb-md-6">
+                <div class="my-0">{% if i == 0 %}avril 2022{% else %}mai 2022{% endif %}</div>
+                {% if i == 0 %}
+                <div class="mb-0 ms-4">
+                    <span class="text-black">180 <span class="d-none d-lg-inline">affichés</span></span> /1025 total
+                </div>
+                {% endif %}
+            </div>
+            <div class="masonry-grid">
+                <div class="masonry-sizer"></div>
+                <!-- événement complet -->
+                <div class="masonry-item">
+                    <div class="list-item-link-wrapper event-soldout">
+
+                        <div class="img-event-container mb-3">
+                            <img
+                                src="{% static 'img/insitu_placeholder_horizontal.jpg' %}"
+                                alt="Placeholder"
+                            >
+                        </div>
+
+                        <div class="border-bottom border-current-color pb-2 mb-1 d-flex flex-nowrap align-items-center">
+                            <span class="badge badge-time bg-black fw-normal fs-6 py-1 px-2 flex-shrink-0">Lu 2</span>
+                            <a href="events-reader.html" class="text-reset events-list-info-wrapper ms-4 flex-grow-1">
+                                <div class="events-list-info-scroll">
+                                    <div class="fs-sm lh-sm d-flex flex-nowrap flex-grow-1 gap-2">
+                                        <div class="text-nowrap">
+                                            Théâtre de la Prillaz
+                                        </div>
+                                        <div class="separator border-start border-current-color"></div>
+                                        <div class="text-nowrap">
+                                            Estavayer-le-Lac Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <h5 class="event-title mb-2">
+                            <a href="events-reader.html" class="stretched-link text-reset text-decoration-none">Record Culture
+                                Fest with Ablette
+                                Records and Varia Instruments
+                            </a>
+                        </h5>
+                        <div class="d-flex align-items-start flex-wrap gap-2">
+                            <span class="badge badge-event" style="color:#6CFFC1;"><span>arts scéniques</span></span>
+                            <span class="badge badge-event" style="color:#FF00FF;"><span>arts scéniques</span></span>
+                            <span class="badge badge-event" style="color:#FFB84D;"><span>arts scéniques</span></span>
+                            <span class="badge badge-event" style="color:#FF0000;"><span>arts scéniques</span></span>
+                            <span class="badge badge-event badge-event-empty" style="color:#FF0000;"><span>arts scéniques</span></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- fin événement complet -->
+                <!-- événement reporté -->
+                <div class="masonry-item">
+                    <div class="list-item-link-wrapper event-postponed">
+
+                        <div class="img-event-container mb-3">
+                            <img
+                                src="{% static 'img/insitu_placeholder_vertical.jpg' %}"
+                                alt="Placeholder"
+                            >
+                        </div>
+
+                        <div class="border-bottom border-current-color pb-2 mb-1 d-flex flex-nowrap align-items-center">
+                            <span class="badge badge-time bg-black fw-normal fs-6 py-1 px-2 flex-shrink-0">Lu 2</span>
+                            <a href="events-reader.html" class="text-reset events-list-info-wrapper ms-4 flex-grow-1">
+                                <div class="events-list-info-scroll">
+                                    <div class="fs-sm lh-sm d-flex flex-nowrap flex-grow-1 gap-2">
+                                        <div class="text-nowrap">
+                                            Théâtre de la Prillaz
+                                        </div>
+                                        <div class="separator border-start border-current-color"></div>
+                                        <div class="text-nowrap">
+                                            Estavayer-le-Lac
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <h5 class="event-title mb-2">
+                            <a href="events-reader.html" class="stretched-link text-reset text-decoration-none">Record Culture
+                                Fest with Ablette
+                                Records and Varia Instruments
+                            </a>
+                        </h5>
+                        <div class="d-flex align-items-start flex-wrap gap-2">
+                            <span class="badge badge-event" style="color:#6CFFC1;"><span>arts scéniques</span></span>
+                            <span class="badge badge-event" style="color:#FF00FF;"><span>arts scéniques</span></span>
+                            <span class="badge badge-event" style="color:#FFB84D;"><span>arts scéniques</span></span>
+                            <span class="badge badge-event" style="color:#FF0000;"><span>arts scéniques</span></span>
+                            <span class="badge badge-event badge-event-empty" style="color:#FF0000;"><span>arts scéniques</span></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- fin événement reporté -->
+                <!-- événement annulé -->
+                <div class="masonry-item">
+                    <div class="list-item-link-wrapper event-canceled">
+
+                        <div class="img-event-container mb-3">
+                            <img
+                                src="{% static 'img/insitu_placeholder.jpg' %}"
+                                alt="Placeholder"
+                            >
+                        </div>
+
+                        <div class="border-bottom border-current-color pb-2 mb-1 d-flex flex-nowrap align-items-center">
+                            <span class="badge badge-time bg-black fw-normal fs-6 py-1 px-2 flex-shrink-0">Lu 2</span>
+                            <a href="events-reader.html" class="text-reset events-list-info-wrapper ms-4 flex-grow-1">
+                                <div class="events-list-info-scroll">
+                                    <div class="fs-sm lh-sm d-flex flex-nowrap flex-grow-1 gap-2">
+                                        <div class="text-nowrap">
+                                            Théâtre de la Prillaz
+                                        </div>
+                                        <div class="separator border-start border-current-color"></div>
+                                        <div class="text-nowrap">
+                                            Estavayer-le-Lac
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <h5 class="event-title mb-2">
+                            <a href="events-reader.html" class="stretched-link text-reset text-decoration-none">Record Culture
+                                Fest with Ablette
+                                Records and Varia Instruments
+                            </a>
+                        </h5>
+                        <div class="d-flex align-items-start flex-wrap gap-2">
+                            <span class="badge badge-event" style="color:#6CFFC1;"><span>arts scéniques</span></span>
+                            <span class="badge badge-event" style="color:#FF00FF;"><span>arts scéniques</span></span>
+                            <span class="badge badge-event" style="color:#FFB84D;"><span>arts scéniques</span></span>
+                            <span class="badge badge-event" style="color:#FF0000;"><span>arts scéniques</span></span>
+                            <span class="badge badge-event badge-event-empty" style="color:#FF0000;"><span>arts scéniques</span></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- fin événement annulé -->
+                {% for i in range(0, 28) -%}
+                <!-- <div class="col-md-6 col-xl-4 col-xxxl-3"> -->
+                <div class="masonry-item">
+                    <div class="list-item-link-wrapper">
+
+                        <div class="img-event-container mb-3">
+                            <img
+                                src="{% static 'img/insitu_placeholder.jpg' %}"
+                                alt="Placeholder"
+                            >
+                        </div>
+
+                        <div class="border-bottom border-current-color pb-2 mb-1 d-flex flex-nowrap align-items-center">
+                            <span class="badge badge-time bg-black fw-normal fs-6 py-1 px-2 flex-shrink-0">Lu 2</span>
+                            <a href="events-reader.html" class="text-reset events-list-info-wrapper ms-4 flex-grow-1">
+                                <div class="events-list-info-scroll">
+                                    <div class="fs-sm lh-sm d-flex flex-nowrap flex-grow-1 gap-2">
+                                        <div class="text-nowrap">
+                                            Théâtre de la Prillaz
+                                        </div>
+                                        <div class="separator border-start border-current-color"></div>
+                                        <div class="text-nowrap">
+                                            Estavayer-le-Lac
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <h5 class="event-title mb-2">
+                            <a href="events-reader.html" class="stretched-link text-reset text-decoration-none">Record Culture
+                                Fest with Ablette
+                                Records and Varia Instruments
+                            </a>
+                        </h5>
+                        <div class="d-flex align-items-start flex-wrap gap-2">
+                            <span class="badge badge-event" style="color:#6CFFC1;"><span>arts scéniques</span></span>
+                            <span class="badge badge-event" style="color:#FF00FF;"><span>arts scéniques</span></span>
+                            <span class="badge badge-event" style="color:#FFB84D;"><span>arts scéniques</span></span>
+                            <span class="badge badge-event" style="color:#FF0000;"><span>arts scéniques</span></span>
+                            <span class="badge badge-event badge-event-empty" style="color:#FF0000;"><span>arts scéniques</span></span>
+                        </div>
+                    </div>
+                </div>
+                {%- endfor %}
+            </div>
+        </div>
+        {%- endfor %}
+    </div>
+</section>

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <script src="https://kit.fontawesome.com/d18519009e.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Integration Boilerplate</title>
+</head>
+
+<body class="{% block classBody %}{% endblock %}">
+    {% include 'elements/offcanvas-panel-dev.html' %}
+    {% include 'elements/offcanvas-ticketings.html' %}
+    {% block body %}{% endblock %}
+</body>
+</html>

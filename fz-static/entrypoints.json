@@ -1,0 +1,17 @@
+{
+  "entrypoints": {
+    "script": {
+      "css": [
+        "/fz-static/script.css"
+      ],
+      "js": [
+        "/fz-static/script.js"
+      ]
+    },
+    "styles": {
+      "css": [
+        "/fz-static/styles.css"
+      ]
+    }
+  }
+}

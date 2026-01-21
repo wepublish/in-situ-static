@@ -1,0 +1,29 @@
+<section class="container-fluid">
+  <div class="mb-5 mb-lg-0">
+    <div>
+      <div class="row row-sceneslist row-cols-md-2 row-cols-xl-3 row-cols-xxxl-4">
+        {% for i in range(0, 28) -%}
+        <!-- <div class="col-md-6 col-xl-4 col-xxxl-3"> -->
+        <div>
+          <div class="py-4 border-bottom">
+            <div class="list-item-link-wrapper">
+              <h5 class="list-item-title mb-2">
+                <a href="events-reader.html" class="stretched-link text-reset text-decoration-none">Record Culture
+                  Association pour la Découverte de la Musique ancienne - ADMA
+                </a>
+              </h5>
+              <div class="d-flex align-items-start flex-wrap gap-2">
+                <span class="badge badge-event" style="color:#6CFFC1;"><span>arts scéniques</span></span>
+                <span class="badge badge-event" style="color:#FF00FF;"><span>arts scéniques</span></span>
+                <span class="badge badge-event" style="color:#FFB84D;"><span>arts scéniques</span></span>
+                <span class="badge badge-event" style="color:#FF0000;"><span>arts scéniques</span></span>
+                <span class="badge badge-event badge-event-empty" style="color:#FF0000;"><span>arts scéniques</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+</section>

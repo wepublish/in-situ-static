@@ -1,0 +1,26 @@
+// Switch
+.form-switch {
+  .form-check-input {
+    height:calc((#{$btn-line-height} * #{$btn-font-size}) + (#{$btn-border-width} + #{$btn-padding-y} * 2));
+    background-image: url("../assets/img/switch-off.svg"), url("../assets/img/switch-shadow.png");
+    &:focus {
+      background-image: url("../assets/img/switch-off.svg"), url("../assets/img/switch-shadow.png");
+    }
+    &:checked {
+      background-image: url("../assets/img/switch-on.svg"), url("../assets/img/switch-shadow-checked.png");
+      background-size: contain;
+    }
+  }
+}
+
+.recurrence-week-days input.form-check-input {
+  border-radius: 6px!important;
+  &:checked {
+    background-image: url("../assets/img/check.svg");
+    background-size: 70%;
+  }
+}
+
+.form-check-input:checked {
+	background-size: $form-check-input-checked-bg-size;
+}
