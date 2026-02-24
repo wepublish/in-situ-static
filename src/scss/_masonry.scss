@@ -1,19 +1,33 @@
 .layout-images {
+    .masonry-grid {
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }
+
     .masonry-sizer,
     .masonry-item {
         width: 25%;
-        
+
+        @media (min-width: 1850px) {
+            width: 20%;
+        }
+
         @include media-breakpoint-down(xxl) {
             width: 33.3333%;
         }
-        
+
         @include media-breakpoint-down(xl) {
             width: 50%;
         }
-        
+
         @include media-breakpoint-down(md) {
             width: 100%;
         }
+    }
+
+    .masonry-item {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 
@@ -44,5 +58,5 @@
 }
 
 .masonry-item {
-    padding: 1rem;
+    margin-bottom: 2rem;
 }
